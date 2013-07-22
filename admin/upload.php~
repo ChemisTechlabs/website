@@ -11,13 +11,13 @@ if($_FILES['uploadfile']['error'] > 0)
  //MAX_FILE_SIZE значение указанное в html-форме загрузки файла
  switch ($_FILES['uploadfile']['error'])
  {
- case 1: echo 'File size exceeds the limit UPLOAD_MAX_FILE_SIZE.'; break;
- case 2: echo 'File size exceeds the limit MAX_FILE_SIZE.'; break;
- case 3: echo 'Failed to download the file.'; break;
- case 4: echo 'No file was uploaded.'; break;
- case 6: echo 'No temporary folder.'; break;
- case 7: echo 'Failed to write file to disk.'; break;
- case 8: echo 'PHP-extension stop file download.'; break;
+ case 1: echo 'Размер файла превышает допустимое значение UPLOAD_MAX_FILE_SIZE'; break;
+ case 2: echo 'Размер файла превышает допустимое значение MAX_FILE_SIZE'; break;
+ case 3: echo 'Не удалось загрузить часть файла'; break;
+ case 4: echo 'Файл не был загружен'; break;
+ case 6: echo 'Отсутствует временная папка.'; break;
+ case 7: echo 'Не удалось записать файл на диск.'; break;
+ case 8: echo 'PHP-расширение остановило загрузку файла.'; break;
  }
  exit;
 } 
@@ -29,7 +29,7 @@ foreach ($blacklist as $item)
 {
  if(preg_match("/$item\$/i", $_FILES['uploadfile']['name']))
  {
- echo "You can not load scripts.";
+ echo "Нельзя загружать скрипты.";
  exit;
  }
 }
@@ -37,7 +37,7 @@ foreach ($blacklist as $item)
 //проверяем MIME-тип файла
 if($_FILES['uploadfile']['type'] != 'application/zip')
 {
- echo 'Are you trying to download the zip file is not.';
+ echo 'Вы пытаетесь загрузить не zip файл.';
  exit;
 }
 
@@ -50,7 +50,7 @@ $uploadfile = $uploaddir.$newFileName;
 
 //загружаем файл move_uploaded_file
 if (move_uploaded_file($_FILES['uploadfile']['tmp_name'], $uploadfile))
-echo "The selected file is loaded.\n";
+echo "Выбранный файл загружен.\n";
 else
-echo "Error loading file.\n";
+echo "Ошибка загрузки файла.\n";
 ?>

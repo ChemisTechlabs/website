@@ -5,7 +5,6 @@
     display:inline-block;
     position:absolute;
     top:11px;
-    float: left;
    }
 body{
 	padding-top:100px;	

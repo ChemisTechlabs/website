@@ -4,7 +4,7 @@
     $admin_password = "199816";   //пароль Админнистратора
     
     $dbhost = "localhost";  //Сервер БД (в 90% случаев это localhost)
-    $dbname = "chemis";       //название БД
+    $dbname = "lomuz_new";       //название БД
     $dbuser = "lomuz";       //пользователь БД   
     $dbpass = "199816"; //Пароль пользователя БД
 

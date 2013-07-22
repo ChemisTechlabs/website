@@ -1,8 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>LoMuz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Никита Брережной" >
+    <!--Css-->    
+    <link href="../css/style.css" rel="stylesheet">    
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <style type="text/css">body{padding-bottom:40px;background-color:#bbbbbb;background-repeat:repeat;}</style>
+  </head>
 <?php
 session_start();
 if (!$_SESSION['admin']) { Header("Location: index.php"); exit; }
-?>
-<?php
 $isinclude = true;
 include "../dbinit.php";
 
@@ -63,57 +74,34 @@ include "../dbinit.php";
 #############################################################################################################################################
 $date = date("d.m.Y H:i:s");
 ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Admin-Chemis</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <meta name="author" content="Никита Бережной" >
-    <!--Css-->    
-    <link href="../css/style.css" rel="stylesheet">     
-    <link rel="shortcut icon" href="../css/favicon.ico">    
-  </head>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Админ-Центр</title>
+</head>
 <body>
-<img src="../img/logo.png" class="logo">
-	<div class="page-header">		 
-    <h1>Chemis <small>project</small></h1>
- 	<div class="navbar">
-   <div class="navbar-inner">
-	<ul class="nav" style="top: 50%;left: 25%;">    
-    <li class="divider-vertical"></li>
-    <li><a href="../">Site</a></li>
-    <li class="divider-vertical"></li>
-    <li><a href="add.php">Add log</a></li>
-    <li class="divider-vertical"></li>
-    <li><a href="logout.php">Exit</a></li>
-    </ul>
-    </div>
-    </div> 
 <div class="container-fluid">
 <div class="row-fluid">
-<div class="span4">
-<div class="well well-small">
-Loading nightly builds
-</div>
-<form enctype="multipart/form-data" action="upload.php" method="post">
-<input type="hidden" name="MAX_FILE_SIZE" value="666999666999">
-Downloadable assembly: <input type="file" name="uploadfile">
-<button class="btn btn-primary" type="submit">Download</button>
-</form>
-</div>
-<div class="span10 pull-right" style="max-width:800px;">
+<div class="span2">
 <?php
+echo "<center><a class=\"btn btn-danger\" href=\"news.php#do=delete_checked\" OnClick=\" if (confirm('Удалить выделенные новости?')) { document.forms['delete_checked'].submit() }\">Удалить</a><br>\n";
+echo "<center><a class=\"btn btn-success\" href=\"news.php?do=add\">Добавить новость</a><br>\n";
+echo "<a class=\"btn btn-inverse\" href=\"admin.php\">Админка</a></center><p>\n";
+?>
+</div>
+<div class="span9">
+<?
+
     $query = "SELECT * FROM `news`";
     $result = mysql_query($query);
                                         
     if (!$result)
     {
-	  print "<center>Error:" . mysql_error() . "<br></center>\n";
+	  print "<center><img src=\"news.gif\"><br>ошибка:" . mysql_error() . "<br></center>\n";
     }
     elseif (mysql_num_rows($result) == 0)
     {
-	 print "<center>No news<br></center>\n";
+	 print "<center><div class=\"alert alert-error\">Новостей нет</div></center>\n";
     }
     else
     {
@@ -126,18 +114,12 @@ Downloadable assembly: <input type="file" name="uploadfile">
 	 echo "<form action=\"{$_SERVER["PHP_SELF"]}\" method=\"POST\" name=\"delete_checked\">\n";
          foreach($rows as $row)
          {                                                                                                                                      
-	     print "<center>\n<b><div class=\"well well-small alert alert-info\">{$row['date']}</div></b>\n<div class=\"well well-small\">{$row['text']}</div><p>\n<a class=\"btn btn-primary disabled\" href=\"admin.php?do=delete&new={$row['id']}\" OnClick=\"return confirm('Delete this news?');\">Delete</a>&nbsp;<a class=\"btn btn-primary disabled\" href=\"admin.php?do=edit&new={$row['id']}\">Edit</a></center>\n";    
+	    print "<center><div class=\"hero-unit\"><d/div>\n{$row['date']}</b><input type=\"checkbox\" name=\"id_{$row['id']}\" value=\"{$row['id']}\"><br>\n{$row['text']}<p>\n<a class=\"btn btn-primary disabled\" href=\"news.php?do=delete&new={$row['id']}\" OnClick=\"return confirm('Удалить эту новость?');\">Удалить</a>&nbsp;<a class=\"btn btn-primary disabled\" href=\"news.php?do=edit&new={$row['id']}\">Изменить</a></center><br>\n";    
          }
 	 echo "</form>\n";
     }
 ?>
 </div>
 </div>
-</div>
-</div>
-<div class="modal-footer">
-<p>&copy; 2013 Chemis Team. <a href="http://vk.com/nikitoshi2013" target="_blank">Nikita Berezhnoj</a> &middot; <a href="http://vk.com/guilherme_caldas" target="_blank">Guilherme Caldas</a> &middot; 
-Ana Evangelho</p>
-</div>
 </body>
-</head>
+</html>

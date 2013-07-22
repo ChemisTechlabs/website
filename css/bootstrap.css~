@@ -3923,7 +3923,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .alert-info {
-  color: #FFF;
+  color: #3a87ad;
   background-color: rgba(128,0,128,.3);
   border-color: #bce8f1;
 }
