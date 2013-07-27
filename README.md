@@ -7,3 +7,4 @@ Author: Nikita Berezhnoj.<br>
 Автор: Никита Бережной.<br>
 For questions, please contact Nik.pr2012@yandex.ru<br>
 По вопросам обращайтесь Nik.pr2012@yandex.ru<br>
+<h5>To install the system changes, edit the file and then go dbinit.php at site.com/admin/admin.php?createtable</h5>
