@@ -17,8 +17,9 @@
       $(document).ready(function() {
         $('.carousel').carousel({interval: 5000});
       });
-    </script>      
-    </head>    	 
+    </script>       
+    
+   </head>    	 
 	<body>	
 	<div class="row-fluid">
    <div class="span10">

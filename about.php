@@ -17,8 +17,8 @@
       $(document).ready(function() {
         $('.carousel').carousel({interval: 5000});
       });
-    </script>      
-    </head>    	 
+    </script>         
+     </head>    	 
 	<body>	
 	<div class="row-fluid">
    <div class="span10">
@@ -29,22 +29,22 @@
 		<a href="https://www.facebook.com/chemisproject" target="_blank"><img src="img/fb.png" alt="Facebook"></a>
 		<p style="color:#800080; font-size: large;">Vkontakte</>
 		<a href="http://vk.com/chemisproject" target="_blank"><img src="img/vk.png" alt="Vkontakte"></a>
-	    </div>  
-   </div>
+	    </div>
+   </div>  	
  	<div class="navbar hidden-phone hidden-tablet">
    <div class="navbar-inner">
 	<ul class="nav" style="top: 50%;left: 30%;">
-   <li class="active">
- <a href="index.php">Home</a></li>
+ <li><a href="index.php">Home</a></li>
  <li class="divider-vertical"></li>
  <li><a href="downloads.php">Downloads</a></li>
  <li class="divider-vertical"></li>
- <li><a href="about.php">About</a></li>
+ <li class="active">
+ <a href="about.php">About</a></li>
  <li class="divider-vertical"></li>
  <li><a href="contact.php">Contact</a></li>
     </ul>
     </div>
-    </div> 
+    </div>    
 <div class="navbar navbar-fixed-top hidden-desktop">
 <div class="navbar-inner">
 <div class="container">
@@ -122,3 +122,8 @@ Ana Evangelho</p>
 </div>
 </body>
 </html>
+
+
+
+
+

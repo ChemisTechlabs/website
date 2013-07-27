@@ -134,7 +134,7 @@ Nightly builds
     while($e=readdir($d)){
     if(is_file($path."/".$e)) $s++;
     }
-     print "<span class=\"badge badge-important\">$s</div>";
+     print "<span class=\"badge-importan\">$s</div>";
     ?>
 </div>
 </div>

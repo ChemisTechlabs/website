@@ -17,7 +17,7 @@
       $(document).ready(function() {
         $('.carousel').carousel({interval: 5000});
       });
-    </script>      
+   </script>       
     </head>    	 
 	<body>	
 	<div class="row-fluid">
@@ -34,17 +34,17 @@
  	<div class="navbar hidden-phone hidden-tablet">
    <div class="navbar-inner">
 	<ul class="nav" style="top: 50%;left: 30%;">
-   <li class="active">
- <a href="index.php">Home</a></li>
+ <li><a href="index.php">Home</a></li>
  <li class="divider-vertical"></li>
- <li><a href="downloads.php">Downloads</a></li>
+ <li class="active">
+ <a href="downloads.php">Downloads</a></li>
  <li class="divider-vertical"></li>
  <li><a href="about.php">About</a></li>
  <li class="divider-vertical"></li>
  <li><a href="contact.php">Contact</a></li>
     </ul>
     </div>
-    </div> 
+    </div>    
 <div class="navbar navbar-fixed-top hidden-desktop">
 <div class="navbar-inner">
 <div class="container">
@@ -122,3 +122,8 @@ Ana Evangelho</p>
 </div>
 </body>
 </html>
+
+
+
+
+

@@ -12,7 +12,7 @@ if (!isset($_GET['new'])) { Header("Location: index.php"); exit; }
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Edit news</title>
+    <title>Admin-Chemis</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <meta name="author" content="Никита Бережной" >
     <!--Css-->    
