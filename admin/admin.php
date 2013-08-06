@@ -114,30 +114,6 @@ $date = date("d.m.Y H:i:s");
 </div>
 <div class="container-fluid">
 <div class="row-fluid">
-<div class="span4">
-<div class="well well-small">
-Loading nightly builds
-</div>
-<form enctype="multipart/form-data" action="upload.php" method="post">
-<input type="hidden" name="MAX_FILE_SIZE" value="666999666999">
-Downloadable assembly: <input type="file" name="uploadfile">
-<button class="btn btn-primary" type="submit">Download</button>
-</form>
-<div class="well well-small">
-Nightly builds
-<?
-    //Каталог, относительно скрипта
-    $path = '../nightly/';
-    $d=@opendir($path);
-    if(!$d) die("Каталог ".$path." не найден!");
-    $s=0;
-    while($e=readdir($d)){
-    if(is_file($path."/".$e)) $s++;
-    }
-     print "<span class=\"badge badge-important\">$s</div>";
-    ?>
-</div>
-</div>
 <div class="span10 pull-right" style="max-width:700px;">
 <?php
     $query = "SELECT * FROM `news`";
@@ -167,6 +143,29 @@ Nightly builds
 	 echo "</form>\n";
     }
 ?>
+</div>
+<div class="span4">
+<div class="well well-small">
+Loading nightly builds
+</div>
+<form enctype="multipart/form-data" action="upload.php" method="post">
+<input type="hidden" name="MAX_FILE_SIZE" value="666999666999">
+Downloadable assembly: <input type="file" name="uploadfile">
+<button class="btn btn-primary" type="submit">Download</button>
+</form>
+<div class="well well-small">
+Nightly builds
+<?
+    //Каталог, относительно скрипта
+    $path = '../nightly/';
+    $d=@opendir($path);
+    if(!$d) die("Каталог ".$path." не найден!");
+    $s=0;
+    while($e=readdir($d)){
+    if(is_file($path."/".$e)) $s++;
+    }
+     print "<span class=\"badge badge-important\">$s</div>";
+    ?>
 </div>
 </div>
 </div>

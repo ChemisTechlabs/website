@@ -25,13 +25,13 @@
    <img src="img/logo.png">
    </div>    
 	<div class="span2">	
-	<p style="color:#800080; font-size: large;"> Facebook</>	
+	<i style="color:#800080; font-size: large;"> Facebook</i>	
 		<a href="https://www.facebook.com/chemisproject" target="_blank"><img src="img/fb.png" alt="Facebook"></a>
-		<p style="color:#800080; font-size: large;">Vkontakte</>
+		<i style="color:#800080; font-size: large;">Vkontakte</i>
 		<a href="http://vk.com/chemisproject" target="_blank"><img src="img/vk.png" alt="Vkontakte"></a>
-	    </div> 
-   </div> 
- 	<div class="navbar hidden-phone hidden-tablet">
+	 </div>
+	 </div> 
+   <div class="navbar hidden-phone hidden-tablet">
    <div class="navbar-inner">
 	<ul class="nav" style="top: 50%;left: 30%;">
     <li><a href="index.php">Home</a></li>
@@ -78,9 +78,9 @@
 We will be ready to accept any proposals for the project!<br>
 Communication with the command:<br>
 <hr>
-Guilherme Tsaldas - lead developer, project manager <a href="mailto:guilhermecaldas@yandex.com">guilhermecaldas@yandex.com</a><br>
+Guilherme Caldas - lead developer, project manager <a href="mailto:guilhermecaldas@yandex.com">guilhermecaldas@yandex.com</a><br>
 <hr>
-Nikita Brezhnev - Web developer, designer <a href="mailto:nik.pr2012@yandex.ru">Nik.pr2012@yandex.ru</a>
+Nikita Berezhnoj - Web developer, designer <a href="mailto:nik.pr2012@yandex.ru">Nik.pr2012@yandex.ru</a>
  </i>
 </div>
 <div class="span5 pull-right">

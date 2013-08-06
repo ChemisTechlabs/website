@@ -25,12 +25,12 @@
    <img src="img/logo.png">
    </div>    
 	<div class="span2">	
-	<p style="color:#800080; font-size: large;"> Facebook</>	
+	<i style="color:#800080; font-size: large;"> Facebook</i>	
 		<a href="https://www.facebook.com/chemisproject" target="_blank"><img src="img/fb.png" alt="Facebook"></a>
-		<p style="color:#800080; font-size: large;">Vkontakte</>
+		<i style="color:#800080; font-size: large;">Vkontakte</i>
 		<a href="http://vk.com/chemisproject" target="_blank"><img src="img/vk.png" alt="Vkontakte"></a>
-	    </div>
-   </div>  	
+	 </div>
+	 </div>   	
  	<div class="navbar hidden-phone hidden-tablet">
    <div class="navbar-inner">
 	<ul class="nav" style="top: 50%;left: 30%;">

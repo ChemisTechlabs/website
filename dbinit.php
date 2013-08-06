@@ -1,4 +1,4 @@
-<?php
+<?php   
     
     $admin_login = "nikitoshi"; //Логин Администратора
     $admin_password = "199816";   //пароль Админнистратора
@@ -10,4 +10,5 @@
 
     mysql_connect($dbhost, $dbuser, $dbpass);     //Не Изменять!
     mysql_select_db($dbname);                     //Не Изменять!
+    
 ?>

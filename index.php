@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta charset="utf-8">
     <title>Chemis-app</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,11 +26,11 @@
    <img src="img/logo.png">
    </div>    
 	<div class="span2">	
-	<p style="color:#800080; font-size: large;"> Facebook</>	
+	<i style="color:#800080; font-size: large;"> Facebook</i>	
 		<a href="https://www.facebook.com/chemisproject" target="_blank"><img src="img/fb.png" alt="Facebook"></a>
-		<p style="color:#800080; font-size: large;">Vkontakte</>
+		<i style="color:#800080; font-size: large;">Vkontakte</i>
 		<a href="http://vk.com/chemisproject" target="_blank"><img src="img/vk.png" alt="Vkontakte"></a>
-	    </div>  
+	 </div>  
    </div>
  	<div class="navbar hidden-phone hidden-tablet">
    <div class="navbar-inner">
@@ -85,7 +86,7 @@
   </div> 
   </div> 
   <div class="span4">
-<?php    
+   <?php    
     include "dbinit.php";
         
     $query = "SELECT * FROM `news`";
