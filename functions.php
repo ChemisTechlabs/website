@@ -11,7 +11,7 @@ function newUser($login, $password) {
     $password = md5(md5($password));
 
     $query = "INSERT INTO users (login, password) VALUES('$login', '$password')";
-    $result = mysql_query($query, $link) or die("Died inserting login info into db.  Error returned if any: " . mysql_error());
+    $result = mysql_query($query,$link) or die("Died inserting login info into db.  Error returned if any: " . mysql_error());
 
     return true;
 }
@@ -24,16 +24,12 @@ function changePassword($oldPassword, $newPassword, $username) {
     $oldPassMd5 = md5(md5($oldPassword));
     $newPassMd5= md5(md5($newPassword));
     
-    $result = mysql_query("select * from users where login='$username'",$link) or die ("Error in query: $query " . mysql_error());
+    $result = mysql_query("select * from users where login='$username' and password='$oldPassMd5'",$link) or die ("Error in query: $query " . mysql_error());
     $row=  mysql_fetch_array($result);
     
     if(mysql_num_rows($row)>0) {
-        if($row['password']==$oldPassMd5){
             mysql_query("update users set password='$newPassMd5' where id=".$row['id']."",$link) or die ("Error in query: $query " . mysql_error());
             return true;
-        }else{
-            return false;
-        }
     }else{
         return false;
     }
