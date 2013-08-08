@@ -12,13 +12,7 @@ include 'head.htm';
     <div class="row-fluid">
         <div class="span10">
             <img src="img/logo.png">
-        </div>    
-        <div class="span2">	
-            <i style="color:#800080; font-size: large;"> Facebook</i>	
-            <a href="https://www.facebook.com/chemisproject" target="_blank"><img src="img/fb.png" alt="Facebook"></a>
-            <i style="color:#800080; font-size: large;">Vkontakte</i>
-            <a href="http://vk.com/chemisproject" target="_blank"><img src="img/vk.png" alt="Vkontakte"></a>
-        </div>  
+        </div>     
     </div>
     <div class="navbar hidden-phone hidden-tablet">
         <div class="navbar-inner">
@@ -64,7 +58,8 @@ include 'head.htm';
                     <div id="myCarousel" class="carousel container slide">
                         <!-- Carousel items -->
                         <div class="carousel-inner">
-                            <div class="active item"><img src="http://lghttp.19445.nexcesscdn.net/80955C/idealshop/media/catalog/product/cache/1/thumbnail/1024x1024/9df78eab33525d08d6e5fb8d27136e95/G/R/GRD_798835_Shambala.jpg" alt="" /></div>
+                            <div class="active item"><img src="http://rcruz.net/wp-content/uploads/2012/11/Aquaria.jpg" alt="" /></div>
+                            <div class="item"><img src="http://www.qpratools.com/gallery/0005/aquaria-luxaeterna-front.jpg" alt="" /></div>
                             <div class="item"><img src="http://cs14113.vk.me/c540103/v540103897/3196/ciBlYXf-WD4.jpg" alt="" /></div>
                             <div class="item"><img src="http://metaltalk.net/images3/angra1.jpg" alt="" /></div>
                         </div>
