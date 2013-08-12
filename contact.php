@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Chemis-app</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Никита Бережной" >
-    <!--Css-->    
-    <link href="css/style.css" rel="stylesheet"> 
-    <link rel="shortcut icon" href="css/favicon.ico"> 
-    <!--java-->
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/bootstrap-carousel.js"></script>  
+<?php
+include "functions.php";
+include 'head.php';
+?>
      <script type="text/javascript">
       $(document).ready(function() {
         $('.carousel').carousel({interval: 5000});
@@ -24,13 +13,7 @@
    <div class="span10">
    <img src="img/logo.png">
    </div>    
-	<div class="span2">	
-	<i style="color:#800080; font-size: large;"> Facebook</i>	
-		<a href="https://www.facebook.com/chemisproject" target="_blank"><img src="img/fb.png" alt="Facebook"></a>
-		<i style="color:#800080; font-size: large;">Vkontakte</i>
-		<a href="http://vk.com/chemisproject" target="_blank"><img src="img/vk.png" alt="Vkontakte"></a>
-	 </div>
-	 </div> 
+	</div> 
    <div class="navbar hidden-phone hidden-tablet">
    <div class="navbar-inner">
 	<ul class="nav" style="top: 50%;left: 30%;">
@@ -43,6 +26,15 @@
     <li class="active">
    <a href="contact.php">Contact</a></li>
     </ul>
+               <?            
+               if(!isAdmin()) {
+	        	}else {
+	        echo "<div class=\"pull-right nav-collapse\">
+	     <a href=\"admin\"><img src=\"img/admin.png\" alt=\"Admin panel\"></a>
+        <a href=\"admin/users.php\"><img src=\"img/users.png\" alt=\"Users panel\"></a>
+        <a href=\"admin/add.php\"><img src=\"img/news.png\" alt=\"News panel\"></a></div>";       
+      }
+  		?> 
     </div>
     </div>    
 <div class="navbar navbar-fixed-top hidden-desktop">
@@ -64,6 +56,15 @@
  <li class="divider-vertical"></li>
  <li><a href="contact.php">Contact</a></li>
 </ul>
+           <?            
+               if(!isAdmin()) {
+	        	}else {
+	        echo "
+	     <a href=\"admin\"><img src=\"img/admin.png\" alt=\"Admin panel\"></a>
+        <a href=\"admin/users.php\"><img src=\"img/users.png\" alt=\"Users panel\"></a>
+        <a href=\"admin/add.php\"><img src=\"img/news.png\" alt=\"News panel\"></a>";       
+      }
+  		?> 
 </div>
 </div>
 </div>
@@ -88,10 +89,9 @@ Nikita Berezhnoj - Web developer, designer <a href="mailto:nik.pr2012@yandex.ru"
 </div>
 </div>
 </div>
-<div class="modal-footer">
-<p>&copy; 2013 Chemis Team. <a href="http://vk.com/nikitoshi2013" target="_blank">Nikita Berezhnoj</a> &middot; <a href="http://vk.com/guilherme_caldas" target="_blank">Guilherme Caldas</a> &middot; 
-Ana Evangelho</p>
-</div>
+ <?php
+ include 'foot.php';
+?>
 </body>
 </html>
 

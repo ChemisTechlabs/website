@@ -1,13 +1,3 @@
-<?php
-session_start();
-
-if (!$_SESSION['admin']) { Header("Location: index.php"); exit; }
-
-if (@$isinclude == false) { Header("Location: index.php"); exit; }
-
-if (!isset($_GET['new'])) { Header("Location: index.php"); exit; }
-
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,8 +10,7 @@ if (!isset($_GET['new'])) { Header("Location: index.php"); exit; }
     <link rel="shortcut icon" href="../css/favicon.ico">    
   </head>
 <body>
-<?php
-
+<?php	
 $date = date("d.m.Y H:i:s");
 echo "<div class=\"hero-unit\"><center>$date</center><p>\n";
 
@@ -78,25 +67,13 @@ $print_form = 0;
         $row_text = $row['text'];
 	$row_text = str_replace("<br />", "", $row_text);	
 	?>
-	<img src="../img/logo" class="logo">
-	<div class="container-fluid">
-   <div class="row-fluid">
-    <div class="span2">	
-	Необходимо использовать Html теги!<br>Также их нужно закрывать!
-	<br>О всех тегах можно узнать на сайте <a href="http:\\htmlbook.ru" target="_blank">HtmlBook</a>
-   </div>
-	<div class="span10">	
-  <form name="addform" action="<?=$phpself ?>" method="POST">
+<form name="addform" action="<?=$phpself ?>" method="POST">
   Дата:<br><input type="text" name="date" value="<?=$row_date ?>"><p>
  <textarea style=" min-width:700px;min-height:300px;" name="addtext" cols=63 rows=10 wrap="hard"><?=$row_text ?></textarea>  
  <br><input class="btn btn-large btn-primary" type="submit" value="Apply">
   <a class="btn btn-success" href="index.php">Admin center</a>
-  </div>
-  </div>
-  </div>
-  
   <?php  
- }    
+   }
 ?>
 </body>
 </html> 

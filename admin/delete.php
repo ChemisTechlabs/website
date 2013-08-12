@@ -1,9 +1,3 @@
-<?php
-if (@$isinclude == false) { Header("Location: index.php"); exit; }
-
-if (!isset($_GET['new'])) { Header("Location: index.php"); exit; }
-
-?>
 <html>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +12,6 @@ if (!isset($_GET['new'])) { Header("Location: index.php"); exit; }
   </head>
 <body>
 <?php
-
 $new_id = $_GET['new'];
 
 	$query = "SELECT * FROM `news` WHERE `id`='$new_id' LIMIT 1";

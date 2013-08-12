@@ -1,7 +1,3 @@
-<?php
-session_start();
-if (!$_SESSION['admin']) { Header("Location: index.php"); exit; }
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,6 +12,17 @@ if (!$_SESSION['admin']) { Header("Location: index.php"); exit; }
 <body>
 <?php
 include "../dbinit.php";
+include "../functions.php";
+if(!isLoggedIn()) {
+	show_login();
+} else {
+
+	if(!isAdmin()) {
+
+		//user is logged in but a regular user
+		echo "<h2 align=\"center\">Sorry, this page is for administrators only</h2>";
+
+	} else {
 $date = date("d.m.Y H:i:s");
 echo "<div class=\"hero-unit\"><center>$date</center><p>\n";
 
@@ -43,7 +50,7 @@ $print_form = 0;
 	    );";
 	    if (mysql_query($query))
 	    {
-	        print "<p><center>The news has been added successfully!<p>\n<a href=\"admin.php?do=add\">Add more</a><br>\n<a href=\"admin.php\">Admin center</a><br />\n<a href=\"../\">Site</a>\n";
+	        print "<p><center>The news has been added successfully!<p>\n<a href=\"index.php?do=add\">Add more</a><br>\n<a href=\"index.php\">Admin center</a><br />\n<a href=\"../\">Site</a>\n";
             }
             else
             {
@@ -59,7 +66,6 @@ $print_form = 0;
     if ($print_form == 1)
     {
 	?>
-	<img src="../img/logo" class="logo">
 	<div class="container-fluid">
    <div class="row-fluid">
     <div class="span2">	
@@ -70,11 +76,13 @@ $print_form = 0;
  <form name="addform" action="<?=$phpself ?>" method="POST"> 
  <textarea style=" min-width:700px;min-height:300px;" name="addtext" wrap="hard"></textarea>  
  <br><input class="btn btn-large btn-primary" type="submit" value="Add news">  
-  <a class="btn btn-success" href="index.php">Admin center</a>
+ <a class="btn btn-success" href="index.php">Admin center</a>
    </div>
    </div>
    </div>    
  <?php
+ }
+ }
  }
 ?>
 </body>
