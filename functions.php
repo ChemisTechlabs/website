@@ -46,6 +46,7 @@ function show_login() {
 	    <head>
 	        <title>Member Login Page</title>
 	        <meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\" />
+	        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
 	        <meta charset=\"utf-8\">
 	        <!--Css-->    
 	        <link href=\"css/style.css\" rel=\"stylesheet\"> 
@@ -61,29 +62,29 @@ function show_login() {
 
 	if(!isLoggedIn()) {
 		// add header function if prefer
-		echo "<center><a href=\"index.php\"><img src=\"img/logo.png\"></a></center> 
+		echo "<center><a href=\"index.php\"><img src=\"img/logo.png\" class=\"img-responsive\"></a></center> 
 		<div class=\"login\">";
 		if(!isset($_POST[submit])) {
 			echo "<form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
 			<a href=\"join.php\" class=\"pull-right\">Registration</a>
 			 <h2>Login</h2>
           <h5>User name</h5>
-			    <input type=\"text\" name=\"username\">
+			    <input type=\"text\" name=\"username\" class=\"col-lg-10\"  placeholder=\"Username\">
 			 <h5>Password</h5>
-				<input type=\"password\" name=\"password\">
-			  <input type=\"submit\" class=\"btn btn-large btn-block btn-info\" name=\"submit\" value=\"submit\">";
+				<input type=\"password\" name=\"password\" class=\"col-lg-10\" placeholder=\"Password\">										
+			  <input type=\"submit\" class=\"btn btn-success\" name=\"submit\" value=\"Submit\">";
 			// add footer function here
 			die();
 		} else if(isset($_POST[submit]) && empty($_POST[username]) or empty($_POST[password])) {
 			// add header function here
-			echo "<span class=\"label label-important\">Please enter a username/password to login</span><form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
+			echo "<span class=\"label label-danger\">Please enter a username/password to login</span><form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
 			<a href=\"join.php\" class=\"pull-right\">Registration</a>
 			 <h2>Login</h2>
           <h5>User name</h5>
-			    <input type=\"text\" name=\"username\">
+			    <input type=\"text\" name=\"username\" class=\"col-lg-10\"  placeholder=\"Username\">
 			 <h5>Password</h5>
-				<input type=\"password\" name=\"password\">
-			  <input type=\"submit\" class=\"btn btn-large btn-block btn-info\" name=\"submit\" value=\"submit\">";			
+				<input type=\"password\" name=\"password\" class=\"col-lg-10\" placeholder=\"Password\">										
+			  <input type=\"submit\" class=\"btn btn-success\" name=\"submit\" value=\"Submit\">";	
 			die();
 		} else if(isset($_POST[submit]) && !empty($_POST[username]) && !empty($_POST[password])) {
 			// Validate their login
@@ -91,19 +92,19 @@ function show_login() {
 			if(mysql_num_rows($result) < 1) {
 				//not in database
 				// add header function here
-				echo "<span class=\"label label-important\">Invalid username or password combination</span><form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
+				echo "<span class=\"label label-danger\">Invalid username or password combination</span><form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
 			<a href=\"join.php\" class=\"pull-right\">Registration</a>
 			 <h2>Login</h2>
           <h5>User name</h5>
-			    <input type=\"text\" name=\"username\">
+			    <input type=\"text\" name=\"username\" class=\"col-lg-10\"  placeholder=\"Username\">
 			 <h5>Password</h5>
-				<input type=\"password\" name=\"password\">
-			  <input type=\"submit\" class=\"btn btn-large btn-block btn-info\" name=\"submit\" value=\"submit\">";
+				<input type=\"password\" name=\"password\" class=\"col-lg-10\" placeholder=\"Password\">										
+			  <input type=\"submit\" class=\"btn btn-success\" name=\"submit\" value=\"Submit\">";
 				die();
 			} else {
 				//entered correct, create session and refresh page
 				$_SESSION[$sess_name] = $_POST[username];
-				header("Location: index.php");
+				header("Location: /");
 			}
 
 		}

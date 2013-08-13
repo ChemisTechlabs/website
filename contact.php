@@ -2,76 +2,42 @@
 include "functions.php";
 include 'head.php';
 ?>
-     <script type="text/javascript">
-      $(document).ready(function() {
-        $('.carousel').carousel({interval: 5000});
-      });
-    </script>         
-     </head>    	 
-	<body>	
-	<div class="row-fluid">
-   <div class="span10">
-   <img src="img/logo.png">
-   </div>    
-	</div> 
-   <div class="navbar hidden-phone hidden-tablet">
-   <div class="navbar-inner">
-	<ul class="nav" style="top: 50%;left: 30%;">
-    <li><a href="index.php">Home</a></li>
-    <li class="divider-vertical"></li>
-    <li><a href="downloads.php">Downloads</a></li>
-    <li class="divider-vertical"></li>
-    <li><a href="about.php">About</a></li>
-    <li class="divider-vertical"></li>
-    <li class="active">
-   <a href="contact.php">Contact</a></li>
-    </ul>
-               <?            
+<body> 	   
+  <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
+  <div class="container">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>     
+    </button>
+    <a href="../" class="navbar-brand">Chemis</a>
+    <div class="nav-collapse collapse bs-navbar-collapse">
+      <ul class="nav navbar-nav">         
+                 <li><a href="index.php">Home</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="downloads.php">Downloads</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="about.php">About</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="contact.php">Contact</a></li>               
+            </ul>            
+                  <?            
                if(!isAdmin()) {
 	        	}else {
-	        echo "<div class=\"pull-right nav-collapse\">
+	        echo "<div class=\"pull-right\">
 	     <a href=\"admin\"><img src=\"img/admin.png\" alt=\"Admin panel\"></a>
         <a href=\"admin/users.php\"><img src=\"img/users.png\" alt=\"Users panel\"></a>
         <a href=\"admin/add.php\"><img src=\"img/news.png\" alt=\"News panel\"></a></div>";       
       }
-  		?> 
+  		?>        
     </div>
-    </div>    
-<div class="navbar navbar-fixed-top hidden-desktop">
-<div class="navbar-inner">
-<div class="container">
-<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<div class="nav-collapse collapse">
-<ul class="nav">
- <li class="active">
- <a href="index.php">Home</a></li>
- <li class="divider-vertical"></li>
- <li><a href="downloads.php">Downloads</a></li>
- <li class="divider-vertical"></li>
- <li><a href="about.php">About</a></li>
- <li class="divider-vertical"></li>
- <li><a href="contact.php">Contact</a></li>
-</ul>
-           <?            
-               if(!isAdmin()) {
-	        	}else {
-	        echo "
-	     <a href=\"admin\"><img src=\"img/admin.png\" alt=\"Admin panel\"></a>
-        <a href=\"admin/users.php\"><img src=\"img/users.png\" alt=\"Users panel\"></a>
-        <a href=\"admin/add.php\"><img src=\"img/news.png\" alt=\"News panel\"></a>";       
-      }
-  		?> 
-</div>
-</div>
-</div>
-</div>
-<div class="container-fluid">
-<div class="row-fluid">
-<div class="span7">
+  </div>
+</div>  
+            <img src="img/logo.png" class="img-responsive">            
+            <? //echo "Hello, <b>".$_SESSION[$sess_name]."</b>";?>              
+ <div class="containerd">
+<div class="row">
+<div class="col-lg-7">
 <div class="well well-small" style="color:#800080;">
 <h1>Support & Contact</h1>
 </div>
@@ -84,8 +50,8 @@ Guilherme Caldas - lead developer, project manager <a href="mailto:guilhermecald
 Nikita Berezhnoj - Web developer, designer <a href="mailto:nik.pr2012@yandex.ru">Nik.pr2012@yandex.ru</a>
  </i>
 </div>
-<div class="span5 pull-right">
-<img src="img/biglogo.jpg" alt="Chemis team">
+<div class="col-lg-5">
+<img src="img/biglogo.jpg" class="img-responsive" alt="Chemis team">
 </div>
 </div>
 </div>
@@ -94,8 +60,3 @@ Nikita Berezhnoj - Web developer, designer <a href="mailto:nik.pr2012@yandex.ru"
 ?>
 </body>
 </html>
-
-
-
-
-

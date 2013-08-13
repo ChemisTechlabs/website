@@ -13,12 +13,19 @@
     <script src="../js/bootstrap.js"></script>    
   </head>
 <body>
-<img src="../img/logo.png" alt="logo">	
-<div class="navbar hidden-phone hidden-tablet">
-<div class="navbar-inner">
-<ul class="nav" style="top: 50%;left: 35%;">    
+<img src="../img/logo.png" class="img-responsive" alt="logo">	
+<div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
+  <div class="container">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>     
+    </button>
+    <a href="../" class="navbar-brand">Chemis</a>
+    <div class="nav-collapse collapse bs-navbar-collapse">
+      <ul class="nav navbar-nav">       
  <li class="divider-vertical"></li>
- <li><a href="../">Site</a></li>
+ <li><a href=".">Panel</a></li>
  <li class="divider-vertical"></li>
  <li><a href="add.php">Add log</a></li>
  <li class="divider-vertical"></li>
@@ -28,29 +35,7 @@
  </ul>
  </div>
  </div>
-<div class="navbar navbar-fixed-top hidden-desktop">
-<div class="navbar-inner">
-<div class="container">
-<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<div class="nav-collapse collapse">
-<ul class="nav">
-    <li class="divider-vertical"></li>
-    <li><a href="../">Site</a></li>
-    <li class="divider-vertical"></li>
-    <li><a href="add.php">Add log</a></li>
-    <li class="divider-vertical"></li>
-    <li><a href="users.php">Users</a></li>
-    <li class="divider-vertical"></li>
-    <li><a href="logout.php">Exit</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
+ </div>
 <?php
 include("../functions.php"); 
  if(!isLoggedIn()) {

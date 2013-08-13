@@ -7,87 +7,57 @@ include 'head.php';
         $('.carousel').carousel({interval: 5000});
     });
 </script>
-<body>
-    <div class="row-fluid">
-        <div class="span10">
-            <img src="img/logo.png">
-            </div>
-            <? //echo "Hello, <b>".$_SESSION[$sess_name]."</b>";?>
-           </div>         	
-        <div class="navbar hidden-phone hidden-tablet">
-        <div class="navbar-inner">
-            <ul class="nav" style="top: 50%;left: 30%;">
-                 <li class="active">
-                 <a href="index.php">Home</a></li>
+<body> 	   
+  <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
+  <div class="container">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>     
+    </button>
+    <a href="../" class="navbar-brand">Chemis</a>
+    <div class="nav-collapse collapse bs-navbar-collapse">
+      <ul class="nav navbar-nav">         
+                 <li><a href="index.php">Home</a></li>
                 <li class="divider-vertical"></li>
                 <li><a href="downloads.php">Downloads</a></li>
                 <li class="divider-vertical"></li>
                 <li><a href="about.php">About</a></li>
                 <li class="divider-vertical"></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="contact.php">Contact</a></li>               
             </ul>            
                   <?            
                if(!isAdmin()) {
 	        	}else {
-	        echo "<div class=\"pull-right nav-collapse\">
+	        echo "<div class=\"pull-right\">
 	     <a href=\"admin\"><img src=\"img/admin.png\" alt=\"Admin panel\"></a>
         <a href=\"admin/users.php\"><img src=\"img/users.png\" alt=\"Users panel\"></a>
         <a href=\"admin/add.php\"><img src=\"img/news.png\" alt=\"News panel\"></a></div>";       
       }
-  		?>  
-            
-         </div>
-    </div> 
-    <div class="navbar navbar-fixed-top hidden-desktop">
-        <div class="navbar-inner">
-            <div class="container">
-                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <div class="nav-collapse collapse">
-                    <ul class="nav">
-                        <li class="active">
-                            <a href="index.php">Home</a></li>
-                        <li class="divider-vertical"></li>
-                        <li><a href="downloads.php">Downloads</a></li>
-                        <li class="divider-vertical"></li>
-                        <li><a href="about.php">About</a></li>
-                        <li class="divider-vertical"></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
-                     <?            
-               if(!isAdmin()) {
-	        	}else {
-	        echo "
-	     <a href=\"admin\"><img src=\"img/admin.png\" alt=\"Admin panel\"></a>
-        <a href=\"admin/users.php\"><img src=\"img/users.png\" alt=\"Users panel\"></a>
-        <a href=\"admin/add.php\"><img src=\"img/news.png\" alt=\"News panel\"></a>";       
-      }
-  		?>  
-                  </div>
-            </div>
-        </div>
-    </div>    
-    <div class="container-fluid">
-        <div class="row-fluid">
-            <div class="span8 hidden-phone hidden-tablet">
+  		?>        
+    </div>
+  </div>
+</div>  
+            <img src="img/logo.png" class="img-responsive">            
+            <? //echo "Hello, <b>".$_SESSION[$sess_name]."</b>";?>              
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 hidden-phone hidden-tablet">
                 <div class="well well-large">
                     <div id="myCarousel" class="carousel container slide">
                         <!-- Carousel items -->
                         <div class="carousel-inner">
-                            <div class="active item"><img src="http://rcruz.net/wp-content/uploads/2012/11/Aquaria.jpg" alt="" /></div>
-                            <div class="item"><img src="http://www.qpratools.com/gallery/0005/aquaria-luxaeterna-front.jpg" alt="" /></div>
-                            <div class="item"><img src="http://cs310222.vk.me/v310222030/1909/8O7JYBai_q8.jpg" alt="" /></div>
-                            <div class="item"><img src="http://metaltalk.net/images3/angra1.jpg" alt="" /></div>
+                            <div class="active item"><img src="img/chemis-logo.png" alt="" /></div>
+                            <div class="item"><img src="img/chemis-logo.png" alt="" /></div>
+                            <div class="item"><img src="img/chemis-logo.png" alt="" /></div>
+                            <div class="item"><img src="img/chemis-logo.png" alt="" /></div>
                         </div>
                         <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
                         <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
                     </div>
                 </div> 
             </div> 
-            <div class="span4">
+            <div class="col-lg-4">
                 <?php
                 include "dbinit.php";
 
@@ -105,13 +75,13 @@ include 'head.php';
                     }
                     $rows = array_reverse($rows);
                     foreach ($rows as $row) {
-                        print "<div class=\"well well-small alert alert-info\">{$row['date']}</div><div style=\"color:#800080;\" class=\"well well-small\">{$row['text']}</div>";
+                        print "<div class=\"panel panel-info\"><div class=\"panel-heading\"><h3 class=\"panel-title\">{$row['date']}</h3></div><div style=\"color:#800080;\">{$row['text']}</div>";
                     }
                 }
                 ?>
             </div>  
         </div>
-    </div> 
+    </div>         
     <?php
     include 'foot.php';
     ?>

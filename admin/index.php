@@ -58,12 +58,19 @@ if(!isLoggedIn()) {
 #############################################################################################################################################
 $date = date("d.m.Y H:i:s");
 ?>
-<img src="../img/logo.png" alt="logo">	
- 	<div class="navbar hidden-phone hidden-tablet">
-<div class="navbar-inner">
-<ul class="nav" style="top: 50%;left: 35%;">    
+<img src="../img/logo.png" class="img-responsive" alt="logo">	
+<div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
+  <div class="container">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>     
+    </button>
+    <a href="../" class="navbar-brand">Chemis</a>
+    <div class="nav-collapse collapse bs-navbar-collapse">
+      <ul class="nav navbar-nav">       
  <li class="divider-vertical"></li>
- <li><a href="../">Site</a></li>
+ <li><a href=".">Panel</a></li>
  <li class="divider-vertical"></li>
  <li><a href="add.php">Add log</a></li>
  <li class="divider-vertical"></li>
@@ -73,32 +80,10 @@ $date = date("d.m.Y H:i:s");
  </ul>
  </div>
  </div>
-<div class="navbar navbar-fixed-top hidden-desktop">
-<div class="navbar-inner">
+ </div>
 <div class="container">
-<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<div class="nav-collapse collapse">
-<ul class="nav">
-    <li class="divider-vertical"></li>
-    <li><a href="../">Site</a></li>
-    <li class="divider-vertical"></li>
-    <li><a href="add.php">Add log</a></li>
-    <li class="divider-vertical"></li>
-    <li><a href="users.php">Users</a></li>
-    <li class="divider-vertical"></li>
-    <li><a href="logout.php">Exit</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="container-fluid">
-<div class="row-fluid">
-<div class="span6">
+<div class="row-">
+<div class="col-lg-6">
 <?php
     $query = "SELECT * FROM `news`";
     $result = mysql_query($query);
@@ -122,7 +107,7 @@ $date = date("d.m.Y H:i:s");
 	 echo "<form action=\"{$_SERVER["PHP_SELF"]}\" method=\"POST\" name=\"delete_checked\">\n";
          foreach($rows as $row)
          {                                                                                                                                      
-	     print "<center>\n<b><div class=\"well well-small alert alert-info\">{$row['date']}</div></b>\n<div class=\"well well-small\">{$row['text']}</div><p>\n<a class=\"btn btn-primary disabled\" href=\"index.php?do=delete&new={$row['id']}\" OnClick=\"return confirm('Delete this news?');\">Delete</a>&nbsp;<a class=\"btn btn-primary disabled\" href=\"index.php?do=edit&new={$row['id']}\">Edit</a></center>\n";    
+	     print "<center><div class=\"panel panel-info\"><div class=\"panel-heading\"><h3 class=\"panel-title\">{$row['date']}</h3></div><div style=\"color:#800080;\">{$row['text']}</div><p>\n<a class=\"btn btn-danger\" href=\"index.php?do=delete&new={$row['id']}\" OnClick=\"return confirm('Delete this news?');\">Delete</a>&nbsp;<a class=\"btn btn-warning\" href=\"index.php?do=edit&new={$row['id']}\">Edit</a></center>\n";    
          }
 	 echo "</form>\n";
     }

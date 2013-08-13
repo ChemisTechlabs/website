@@ -35,11 +35,11 @@ if(!isset($_POST[submit])) {
 		<input type=\"password\" name=\"verify\">
 	    <h5>Email Address</h5>
 		<input type=\"text\" name=\"email\">
-	  	<input type=\"submit\" class=\"btn btn-large btn-block btn-info\" name=\"submit\" value=\"submit\">";
+	  	<input type=\"submit\" class=\"btn btn-success btn-block\" name=\"submit\" value=\"Submit\">";
 
 } else if(isset($_POST[submit]) && empty($_POST[fname]) or empty($_POST[lname]) or empty($_POST[username]) or empty($_POST[password]) or empty($_POST[verify]) or empty($_POST[email])) {
 
-		echo "<span class=\"label label-important\">Please enter all fields in the form</span>
+		echo "<span class=\"label label-danger\">Please enter all fields in the form</span>
 		<form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
 	<a href=\"login.php\" class=\"pull-right\">Login</a>
 	   <h2>Register</h2>
@@ -55,7 +55,7 @@ if(!isset($_POST[submit])) {
 		<input type=\"password\" name=\"verify\">
 	    <h5>Email Address</h5>
 		<input type=\"text\" name=\"email\">
-	  	<input type=\"submit\" class=\"btn btn-large btn-block btn-info\" name=\"submit\" value=\"submit\">";
+	  	<input type=\"submit\" class=\"btn btn-success btn-block\" name=\"submit\" value=\"Submit\">";
 
 } else if(isset($_POST[submit]) && !empty($_POST[fname]) && !empty($_POST[lname]) && !empty($_POST[username]) && !empty($_POST[password]) && !empty($_POST[verify]) && !empty($_POST[email])) {
 
@@ -83,12 +83,12 @@ if(!isset($_POST[submit])) {
 	}
 
 	if(count($error) > 0) {
-		echo "<span class=\"label label-important\">The following errors have occured while processing your member registration:<ul>";
+		echo "<div class=\"alert alert-danger\">The following errors have occured while processing your member registration<ul>";
 
 			for($x = 0; $x < count($error); $x++) {
 				echo "<li>".$error[$x]."</li>";
 			}
-			echo "</ul></span><p align=\"center\"><a href=\"".$_SERVER[PHP_SELF]."\">Please try again</a>";
+			echo "</ul></div><p align=\"center\"><a href=\"".$_SERVER[PHP_SELF]."\">Please try again</a>";
 
 	} else if(count($error) < 1) {
 

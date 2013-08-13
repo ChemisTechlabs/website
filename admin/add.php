@@ -66,14 +66,10 @@ $print_form = 0;
     if ($print_form == 1)
     {
 	?>
-	<div class="container-fluid">
-   <div class="row-fluid">
-    <div class="span2">	
-	Необходимо использовать Html теги!<br>Также их нужно закрывать!
-	<br>О всех тегах можно узнать на сайте <a href="http:\\htmlbook.ru" target="_blank">HtmlBook</a>
-   </div>
-	<div class="span10">	
- <form name="addform" action="<?=$phpself ?>" method="POST"> 
+	<div class="container">
+   <div class="row">
+    <div class="col-lg-10">	
+	 <form name="addform" action="<?=$phpself ?>" method="POST"> 
  <textarea style=" min-width:700px;min-height:300px;" name="addtext" wrap="hard"></textarea>  
  <br><input class="btn btn-large btn-primary" type="submit" value="Add news">  
  <a class="btn btn-success" href="index.php">Admin center</a>

@@ -68,7 +68,7 @@ $print_form = 0;
 	$row_text = str_replace("<br />", "", $row_text);	
 	?>
 <form name="addform" action="<?=$phpself ?>" method="POST">
-  Дата:<br><input type="text" name="date" value="<?=$row_date ?>"><p>
+  Date:<br><input type="text" name="date" value="<?=$row_date ?>"><p>
  <textarea style=" min-width:700px;min-height:300px;" name="addtext" cols=63 rows=10 wrap="hard"><?=$row_text ?></textarea>  
  <br><input class="btn btn-large btn-primary" type="submit" value="Apply">
   <a class="btn btn-success" href="index.php">Admin center</a>
