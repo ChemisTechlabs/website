@@ -6,6 +6,7 @@
         <title>Chemis Online</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
+        <meta name="version" content="Plum">
         <meta name="author" content="Никита Бережной" >
         <!--Css-->    
         <link href="css/style.css" rel="stylesheet"> 

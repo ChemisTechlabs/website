@@ -58,7 +58,6 @@ if(!isLoggedIn()) {
 #############################################################################################################################################
 $date = date("d.m.Y H:i:s");
 ?>
-<img src="../img/logo.png" class="img-responsive" alt="logo">	
 <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
   <div class="container">
     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -66,7 +65,7 @@ $date = date("d.m.Y H:i:s");
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>     
     </button>
-    <a href="../" class="navbar-brand">Chemis</a>
+    <a href="../" class="navbar-brand"><img src="../img/nav.png" class="img-responsive"></a>
     <div class="nav-collapse collapse bs-navbar-collapse">
       <ul class="nav navbar-nav">       
  <li class="divider-vertical"></li>
@@ -77,7 +76,7 @@ $date = date("d.m.Y H:i:s");
  <li><a href="users.php">Users</a></li>
  <li class="divider-vertical"></li>
  <li><a href="logout.php">Exit</a></li>
- </ul>
+ </ul>   
  </div>
  </div>
  </div>
