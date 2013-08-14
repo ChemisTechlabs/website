@@ -13,20 +13,6 @@ $path_to = "/";
 $redir = "/"; 
 session_start();
 ob_start();
-	echo "<!DOCTYPE html>
- <html lang=\"en\">
-     <head>
-         <title>Member Login Page</title>
-         <meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\" />
-          <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-         <meta charset=\"utf-8\">
-         <!--Css-->    
-         <link href=\"css/style.css\" rel=\"stylesheet\"> 
-         <link rel=\"shortcut icon\" href=\"css/favicon.ico\"> 
-         <!--java-->
-          <script src=\"js/jquery.js\"></script>
-          <script src=\"js/bootstrap.js\"></script>           
-      </head>"; 
 function isLoggedIn() {
 
 	global $sess_name;
@@ -54,6 +40,22 @@ function show_login() {
 
 	// if user is not logged in, show the login form
 	    
+//Head
+	echo "<!DOCTYPE html>
+ <html lang=\"en\">
+     <head>
+         <title>Member Login Page</title>
+         <meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\" />
+          <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+         <meta charset=\"utf-8\">
+         <!--Css-->    
+         <link href=\"css/style.css\" rel=\"stylesheet\"> 
+         <link rel=\"shortcut icon\" href=\"css/favicon.ico\"> 
+         <!--java-->
+          <script src=\"js/jquery.js\"></script>
+          <script src=\"js/bootstrap.js\"></script>           
+      </head>"; 
+      	    
 	if($_GET[action] == "logout") {
 		logout();
 	}
