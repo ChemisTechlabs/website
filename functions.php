@@ -1,5 +1,4 @@
 <?php
-include "head.php";
 $users_table = "users";
 
 // mysql settings
@@ -12,9 +11,22 @@ $sess_name = "chemis_user";
 $path_to = "/"; 
 
 $redir = "/"; 
-
 session_start();
 ob_start();
+	echo "<!DOCTYPE html>
+ <html lang=\"en\">
+     <head>
+         <title>Member Login Page</title>
+         <meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\" />
+          <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+         <meta charset=\"utf-8\">
+         <!--Css-->    
+         <link href=\"css/style.css\" rel=\"stylesheet\"> 
+         <link rel=\"shortcut icon\" href=\"css/favicon.ico\"> 
+         <!--java-->
+          <script src=\"js/jquery.js\"></script>
+          <script src=\"js/bootstrap.js\"></script>           
+      </head>"; 
 function isLoggedIn() {
 
 	global $sess_name;
@@ -55,10 +67,11 @@ function show_login() {
 			<a href=\"join.php\" class=\"pull-right\">Registration</a>
 			 <h2>Login</h2>
           <h5>User name</h5>
-			    <input type=\"text\" name=\"username\" class=\"col-lg-10\"  placeholder=\"Username\">
+			    <input type=\"text\" name=\"username\"  placeholder=\"Username\">
 			 <h5>Password</h5>
-				<input type=\"password\" name=\"password\" class=\"col-lg-10\" placeholder=\"Password\">										
-			  <input type=\"submit\" class=\"btn btn-success\" name=\"submit\" value=\"Submit\">";
+				<input type=\"password\" name=\"password\" placeholder=\"Password\">
+				<br>										
+			  <input type=\"submit\" class=\"btn btn-success\" name=\"submit\" value=\"Submit\"></div></div>";
 			// add footer function here
 			die();
 		} else if(isset($_POST[submit]) && empty($_POST[username]) or empty($_POST[password])) {
@@ -67,9 +80,10 @@ function show_login() {
 			<a href=\"join.php\" class=\"pull-right\">Registration</a>
 			 <h2>Login</h2>
           <h5>User name</h5>
-			    <input type=\"text\" name=\"username\" class=\"col-lg-10\"  placeholder=\"Username\">
+			    <input type=\"text\" name=\"username\"  placeholder=\"Username\">
 			 <h5>Password</h5>
-				<input type=\"password\" name=\"password\" class=\"col-lg-10\" placeholder=\"Password\">										
+				<input type=\"password\" name=\"password\"  placeholder=\"Password\">	
+				<br>									
 			  <input type=\"submit\" class=\"btn btn-success\" name=\"submit\" value=\"Submit\">";	
 			die();
 		} else if(isset($_POST[submit]) && !empty($_POST[username]) && !empty($_POST[password])) {
@@ -82,9 +96,10 @@ function show_login() {
 			<a href=\"join.php\" class=\"pull-right\">Registration</a>
 			 <h2>Login</h2>
           <h5>User name</h5>
-			    <input type=\"text\" name=\"username\" class=\"col-lg-10\"  placeholder=\"Username\">
+			    <input type=\"text\" name=\"username\" placeholder=\"Username\">
 			 <h5>Password</h5>
-				<input type=\"password\" name=\"password\" class=\"col-lg-10\" placeholder=\"Password\">										
+				<input type=\"password\" name=\"password\" placeholder=\"Password\">	
+				<br>									
 			  <input type=\"submit\" class=\"btn btn-success\" name=\"submit\" value=\"Submit\">";
 				die();
 			} else {

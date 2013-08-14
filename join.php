@@ -23,7 +23,8 @@ if(!isset($_POST[submit])) {
 		<input type=\"password\" name=\"verify\">
 	    <h5>Email Address</h5>
 		<input type=\"text\" name=\"email\">
-	  	<input type=\"submit\" class=\"btn btn-success btn-block\" name=\"submit\" value=\"Submit\">";
+		<br>
+	  	<input type=\"submit\" class=\"btn btn-success \" name=\"submit\" value=\"Submit\">";
 
 } else if(isset($_POST[submit]) && empty($_POST[fname]) or empty($_POST[lname]) or empty($_POST[username]) or empty($_POST[password]) or empty($_POST[verify]) or empty($_POST[email])) {
 
@@ -43,7 +44,8 @@ if(!isset($_POST[submit])) {
 		<input type=\"password\" name=\"verify\">
 	    <h5>Email Address</h5>
 		<input type=\"text\" name=\"email\">
-	  	<input type=\"submit\" class=\"btn btn-success btn-block\" name=\"submit\" value=\"Submit\">";
+		<br>
+	  	<input type=\"submit\" class=\"btn btn-success \" name=\"submit\" value=\"Submit\">";
 
 } else if(isset($_POST[submit]) && !empty($_POST[fname]) && !empty($_POST[lname]) && !empty($_POST[username]) && !empty($_POST[password]) && !empty($_POST[verify]) && !empty($_POST[email])) {
 
