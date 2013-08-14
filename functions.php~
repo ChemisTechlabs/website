@@ -49,7 +49,8 @@ function show_login() {
 	if(!isLoggedIn()) {
 		// add header function if prefer
 		echo "<center><a href=\"index.php\"><img src=\"img/logo.png\" class=\"img-responsive\"></a></center><div class=\"row\">
-<div class=\"col-md-3 col-md-offset-5\"><div class=\"panel\">";		
+<div class=\"col-md-3 col-md-offset-5\"><div class=\"panel\">";
+		<div class=\"login\">";
 		if(!isset($_POST[submit])) {
 			echo "<form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
 			<a href=\"join.php\" class=\"pull-right\">Registration</a>

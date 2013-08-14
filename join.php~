@@ -30,8 +30,11 @@ if(!isset($_POST[submit])) {
 		echo "<span class=\"label label-danger\">Please enter all fields in the form</span>
 		<form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
 	<a href=\"login.php\" class=\"pull-right\">Login</a>
-	  <h2>Register</h2>	 
-     <h5>First Name</h5>
+	<div class=\"panel-body\">
+	   Register
+	   </div>
+	   <div class=\"panel-footer\">
+       <h5>First Name</h5>
 	    <input type=\"text\" name=\"fname\">
 	    <h5>Last Name</h5>
 		<input type=\"text\" name=\"lname\">
