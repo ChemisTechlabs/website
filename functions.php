@@ -1,5 +1,11 @@
 <?php
+//new $
+$ip_address = $_SERVER["REMOTE_ADDR"];
 $users_table = "users";
+$date = date("D M j G:i:s T Y");
+$chemis = "boot.img";
+//old $
+$alpha_table = "chemistest";
 
 // mysql settings
 $db_host = "localhost";
@@ -14,7 +20,7 @@ $redir = "/";
 session_start();
 ob_start();
 function isLoggedIn() {
-
+$user = $_SESSION[$sess_name];
 	global $sess_name;
 
 	// check if session is intact
@@ -33,7 +39,7 @@ function db_connect() {
 
 }
 db_connect();
-
+$user = $_SESSION[$sess_name];
 function show_login() {
 
 	global $users_table, $sess_name;

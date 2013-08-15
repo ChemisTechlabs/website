@@ -56,7 +56,6 @@ if(!isLoggedIn()) {
      }
 #############################################################################################################################################
 #############################################################################################################################################
-$date = date("d.m.Y H:i:s");
 ?>
 <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
   <div class="container">
@@ -82,7 +81,7 @@ $date = date("d.m.Y H:i:s");
  </div>
 <div class="container">
 <div class="row-">
-<div class="col-lg-6">
+<div class="col-lg-7">
 <?php
     $query = "SELECT * FROM `news`";
     $result = mysql_query($query);
@@ -110,6 +109,79 @@ $date = date("d.m.Y H:i:s");
          }
 	 echo "</form>\n";
     }
+?>
+</div>
+<div class="col-lg-4">
+<?
+//Not login
+$notlogin = @mysql_query("SELECT COUNT(*) FROM $alpha_table where nl='1'");
+$row = mysql_fetch_row($notlogin);
+$nl= $row[0]; 
+//Login
+$login = @mysql_query("SELECT COUNT(*) FROM $alpha_table where nl='0'");
+$rowl = mysql_fetch_row($login);
+$ln = $rowl[0]; 
+?>
+ <div class="list-group">
+        <a href="?see=people" class="list-group-item">
+          <h4 class="list-group-item-heading">People download programs <b><? echo "$nl"?></b></h4>
+          <p class="list-group-item-text">This takes into account unregistered users download.</p>
+        </a>
+        <a href="?see=users" class="list-group-item">
+          <h4 class="list-group-item-heading">Users download the program <b><? echo "$ln"?></b></h4>
+          <p class="list-group-item-text">This takes into account the registered users download.</p>
+        </a>        
+      </div>
+      <div class="alert alert-success">Downloads:<b> <? printf($nl+$ln) ?></b></div>
+    </div>
+<?
+if($_GET[see] == "people") {
+echo "<br><table class=\"table table-striped\">
+			<thead>
+			  <tr>
+				<th>#</th>				
+				<th>IP</th>
+				<th>Date</th>				
+			  </tr>
+			  </thead>
+			  <tbody>";
+
+			  $result = @mysql_query("SELECT * FROM $alpha_table where nl='1'");
+			  while($row = mysql_fetch_array($result)) {
+				  echo "
+				   <tr>
+					<td>".$row[id]."</td>
+					<td>".$row[ip]."</td>					
+					<td>".$row[date]."</td>					
+				  </tr>";
+			  }
+			  echo "</tbody></table>";	
+	}	
+	
+	if($_GET[see] == "users") {
+   echo "<br><table class=\"table table-striped\">
+			<thead>
+			  <tr>
+				<th>#</th>
+				<th>IP</th>
+				<th>Username</th>
+				<th>Date</th>				
+			  </tr>
+			  </thead>
+			  <tbody>";
+
+			  $result = @mysql_query("SELECT * FROM $alpha_table where nl='0'");
+			  while($row = mysql_fetch_array($result)) {
+				  echo "
+				   <tr>
+					<td>".$row[id]."</td>
+					<td>".$row[ip]."</td>
+					<td>".$row[username]."</td>
+					<td>".$row[date]."</td>					
+				  </tr>";
+			  }
+			  echo "</tbody></table>";	
+	}	
 ?>
 </div>
 </div>

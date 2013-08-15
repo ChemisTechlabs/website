@@ -75,31 +75,22 @@ include 'head.php';
                     </div>
                 </div> 
             </div> 
-            <div class="col-lg-4">
-                <?php
-                include "dbinit.php";
-
-                $query = "SELECT * FROM `news`";
-                $result = mysql_query($query);
-
-                if (!$result) {
-                    print "<center><br>ошибка:" . mysql_error() . "<br></center>";
-                } elseif (mysql_num_rows($result) == 0) {
-                    print "<center><div class=\"alert alert-error\">Новостей нет</div></center>\n";
-                } else {
-                    $rows = array();
-                    while ($row = mysql_fetch_assoc($result)) {
-                        $rows[] = $row;
-                    }
-                    $rows = array_reverse($rows);
-                    foreach ($rows as $row) {
-                        print "<div class=\"panel panel-info\"><div class=\"panel-heading\"><h3 class=\"panel-title\">{$row['date']}</h3></div><div style=\"color:#800080;\">{$row['text']}</div></div>";
-                    }
-                }
-                ?>
-            </div>  
-        </div>
-    </div>         
+           <div class="col-lg-4">                   
+<?
+if($_POST[submit])
+{		
+if(!isLoggedIn()) {		 
+$result = mysql_query ("INSERT INTO $alpha_table (ip, date, nl)  VALUES ('$ip_address','$date','1')");
+header("location: $chemis");		
+} else { 
+$result = mysql_query ("INSERT INTO $alpha_table (ip, username, date)  VALUES ('$ip_address','$user','$date')"); 
+header("location: $chemis");			
+}
+}	
+?>
+<form method="POST" action="<?echo $_SERVER['PHP_SELF'];?>">
+	<input type="submit" name="submit" class="btn btn-success" value="Download">
+	</form>            
     <?php
     include 'foot.php';
     ?>
