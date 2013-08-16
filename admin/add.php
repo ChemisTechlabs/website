@@ -11,7 +11,6 @@
     </head>
 <body>
 <?php
-include "../dbinit.php";
 include "../functions.php";
 if(!isLoggedIn()) {
 	show_login();
@@ -50,7 +49,7 @@ $print_form = 0;
 	    );";
 	    if (mysql_query($query))
 	    {
-	        print "<p><center>The news has been added successfully!<p>\n<a href=\"index.php?do=add\">Add more</a><br>\n<a href=\"index.php\">Admin center</a><br />\n<a href=\"../\">Site</a>\n";
+	        print "<p><center>The news has been added successfully!<p>\n<a href=\"add.php\">Add more</a><br>\n<a href=\"index.php\">Admin center</a><br />\n<a href=\"../\">Site</a>\n";
             }
             else
             {

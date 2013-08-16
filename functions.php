@@ -1,22 +1,5 @@
 <?php
-//new $
-$ip_address = $_SERVER["REMOTE_ADDR"];
-$users_table = "users";
-$date = date("D M j G:i:s T Y");
-$chemis = "boot.img";
-//old $
-$alpha_table = "chemistest";
-
-// mysql settings
-$db_host = "localhost";
-$db_user = "lomuz";
-$db_pass = "199816";
-$db_name = "chemis";
-
-$sess_name = "chemis_user"; 
-$path_to = "/"; 
-
-$redir = "/"; 
+include "dbinit.php";
 session_start();
 ob_start();
 function isLoggedIn() {
