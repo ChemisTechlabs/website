@@ -12,10 +12,10 @@ $users_table = "users";
 $news_table = "news";
 $download_table = "downloads";
 // mysql settings
-$db_host = "localhost";
-$db_user = "lomuz";
+$db_host = "mysql.hostinger.ru";
+$db_user = "u991877498_cm";
 $db_pass = "199816";
-$db_name = "chemis";
+$db_name = "u991877498_cm";
 //other
 $sess_name = "chemis_user"; 
 $path_to = "/"; 

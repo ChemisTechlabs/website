@@ -1,9 +1,17 @@
 <?php
 include "functions.php";
 include 'head.php';
+if(!isLoggedIn()) {
+	show_login();
+} else {
 ?>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.carousel').carousel({interval: 5000});
+    });
+</script>
 <body> 	   
-<header class="navbar navbar-inverse navbar-fixed-top" role="banner">
+  <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
    <nav class="navbar navbar-collapse navbar-fixed-top bs-docs-nav" role="navigation">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -56,29 +64,59 @@ include 'head.php';
     </ul>
   </div>
 </nav>
-</header>               
- <div class="containerd">
-<div class="row">
-<div class="col-lg-7">
-<div class="well well-small" style="color:#800080;">
-<h1>Support & Contact</h1>
+</header>
+    <div class="container">
+        <div class="row">
+<div class="col-8">                   
+<h1>A special unit Alpha.</h1>
+<div class="col-lg-2">   
+<img src="img/alpha.png" alt="Alpha">
 </div>
-<i style="font-size: large;">
-We will be ready to accept any proposals for the project!<br>
-Communication with the command:<br>
+<br>
+<h2>
+In Chemis created a new division, is focused on testing.</h2>
+<h4>  
+While it called <b>"Alpha Lab"</b>
+In division has its own culture and atmosphere.   
+</h4>
+<a href="?add=add"  class="btn btn-default btn-lg">Apply now</a>
+</div>
 <hr>
-Guilherme Caldas - lead developer, project manager <a href="mailto:guilhermecaldas@yandex.com">guilhermecaldas@yandex.com</a><br>
-<hr>
-Nikita Berezhnoj - Web developer, designer <a href="mailto:nik.pr2012@yandex.ru">Nik.pr2012@yandex.ru</a>
- </i>
-</div>
-<div class="col-lg-5">
-<img src="img/biglogo.jpg" class="img-responsive" alt="Chemis team">
-</div>
-</div>
-</div>
- <?php
- include 'foot.php';
+<center>
+<? 
+if($_GET[add]) {
+echo "<form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
+<input type=\"submit\" name=\"submit\" class=\"btn btn-primary btn-lg\"value=\"Join the team\">";
+}
 ?>
+<?
+if($_POST[submit]) {	
+ $result = mysql_query("SELECT * FROM $alpha_table WHERE username='".$user."'");
+ if(mysql_num_rows($result) > 0) {
+ echo "<span class=\"label label-warning\">You have already applied! Wait for the administration's decision</span>"; 
+ } else {  
+$result = mysql_query ("INSERT INTO $alpha_table  (ip, username, date, status)  VALUES ('$ip_address','$user','$date','0')");	
+}
+}
+$result = @mysql_query("SELECT * FROM $alpha_table where username='".$user."'");
+			  while($row = mysql_fetch_array($result)) {
+				  if($row[status] == 1) {
+					 $ds = "<h4><span class=\"label label-danger\">Administration is not your application and you can download the Chemis-alpha.</span></h4>";
+				  } else if($row[status] == 2) {
+					 $ds = "<h4><span class=\"label label-success\">Administration has approved your application and you can download the Chemis-alpha.</span></h4><br>
+					 <a href=\"".$alpha_chemis."\"  class=\"btn btn-success btn-lg\">Apply now</a>";	
+			     } else if($row[status] == 0) {
+					  $ds = "<h4><span class=\"label label-default\">Your request is under consideration by the administration.</span></h4>";	 
+}	
+}
+}
+?>
+<? echo "$ds";?>
+</div>
+</div>
+</center>
+<?
+ include 'foot.php';
+ ?>
 </body>
 </html>
