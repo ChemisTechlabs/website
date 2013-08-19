@@ -45,7 +45,7 @@ if(!isset($_POST[submit])) {
 	    <h5>Email Address</h5>
 		<input type=\"text\" class=\"form-control\" name=\"email\">
 		<br>
-	  	<input type=\"submit\" cclass=\"btn btn-large btn-primary btn-block\" name=\"submit\" value=\"Submit\">";
+	  	<input type=\"submit\" class=\"btn btn-large btn-primary btn-block\" name=\"submit\" value=\"Submit\">";
 
 } else if(isset($_POST[submit]) && !empty($_POST[fname]) && !empty($_POST[lname]) && !empty($_POST[username]) && !empty($_POST[password]) && !empty($_POST[verify]) && !empty($_POST[email])) {
 

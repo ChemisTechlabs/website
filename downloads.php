@@ -30,7 +30,8 @@ include 'head.php';
                 <li><a href="contact.php">Contact</a></li>       
           </ul>
         <ul class="nav navbar-nav navbar-right">  
-          <? if(!isLoggedIn()) {
+          <? 
+          if(!isLoggedIn()) {
 	echo "<li class=\"dropdown\"><a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Login / Register<b class=\"caret\"></b></a>
     <ul class=\"dropdown-menu\">
 	<li><a href=\"login.php\">Login</a></li>
@@ -51,9 +52,7 @@ include 'head.php';
       if(!isAdmin()) {
   	}else {
   echo "
-  <a href=\"admin\"><img src=\"img/admin.png\" alt=\"Admin panel\"></a>
-  <a href=\"admin/users.php\"><img src=\"img/users.png\" alt=\"Users panel\"></a>
-  <a href=\"admin/add.php\"><img src=\"img/news.png\" alt=\"News panel\"></a>";       
+  <a href=\"admin\" class=\"navbar-t\"><img src=\"img/admin.png\" alt=\"Admin panel\"></a>";       
 }
   		?>        
         </ul>        
@@ -64,23 +63,9 @@ include 'head.php';
 </header>
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 hidden-phone hidden-tablet">
-                <div class="well well-large">
-                    <div id="myCarousel" class="carousel container slide">
-                        <!-- Carousel items -->
-                        <div class="carousel-inner">
-                            <div class="active item"><img src="img/chemis-logo.png" alt="" /></div>
-                            <div class="item"><img src="img/chemis-logo.png" alt="" /></div>
-                            <div class="item"><img src="img/chemis-logo.png" alt="" /></div>
-                            <div class="item"><img src="img/chemis-logo.png" alt="" /></div>
-                        </div>
-                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                        <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-                    </div>
-                </div> 
-            </div> 
-           <div class="col-lg-4">                   
-<?
+            <div class="col-8">  
+          
+ <?
 if($_POST[submit])
 {		
 if(!isLoggedIn()) {		 
@@ -92,9 +77,34 @@ header("location: $chemis");
 }
 }	
 ?>
+<center>
+
 <form method="POST" action="<?echo $_SERVER['PHP_SELF'];?>">
-	<input type="submit" name="submit" class="btn btn-success" value="Download">
-	</form>            
+<input type="submit" name="submit" class="btn btn-outline btn-lg" value="Download Chemis">
+	</form>	
+	</center>
+	</div>
+	</div>
+	<hr>
+                 <div class="col-xs-6 col-md-6">                  
+              <center><h2>Chemis constantly updated</h2> 
+          <img src="img/calendar" class="img-relative"> 
+                </div>
+            <div class="col-xs-6 col-md-6">    
+            <center> <h2>Our products are protected</h2>       
+            <img src="img/lock" class="img-relative">
+           </div>
+            <div class="col-xs-6 col-md-6">
+              <center><h2>In Chemis the most accurate results</h2>
+           <img src="img/calculator" class="img-relative"> 
+             </div>
+            <div class="col-xs-6 col-md-6">
+             <center><h2>We care about users</h2>
+            <img src="img/user" class="img-relative">  
+           </div>          
+           </div>
+           </div>            
+        
     <?php
     include 'foot.php';
     ?>

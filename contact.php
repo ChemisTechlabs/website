@@ -46,9 +46,7 @@ include 'head.php';
       if(!isAdmin()) {
   	}else {
   echo "
-  <a href=\"admin\"><img src=\"img/admin.png\" alt=\"Admin panel\"></a>
-  <a href=\"admin/users.php\"><img src=\"img/users.png\" alt=\"Users panel\"></a>
-  <a href=\"admin/add.php\"><img src=\"img/news.png\" alt=\"News panel\"></a>";       
+  <a href=\"admin\"><img src=\"img/admin.png\" alt=\"Admin panel\"></a>";       
 }
   		?>        
         </ul>        
