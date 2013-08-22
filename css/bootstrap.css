@@ -324,13 +324,13 @@ textarea {
 }
 
 a {
-  color: #428bca;
+  color: #800080;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #2a6496;
+  color: #463265;/*#2a6496;*/
   text-decoration: underline;
 }
 
@@ -5522,9 +5522,9 @@ a.list-group-item:focus {
 }
 
 .panel-info > .panel-heading {
-  color: #3a87ad;
-  background-color: #d9edf7;
-  border-color: #bce8f1;
+  color: #cdbfe3;
+  background-color: #563d7c;
+  border-color: #463265;
 }
 
 .panel-info > .panel-heading + .panel-collapse .panel-body {

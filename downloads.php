@@ -87,7 +87,7 @@ header("location: $chemis");
 	</div>
 	<hr>
                  <div class="col-xs-6 col-md-6">                  
-              <center><h2>Chemis constantly updated</h2> 
+              <center><h2>Chemis is constantly updated</h2> 
           <img src="img/calendar" class="img-relative"> 
                 </div>
             <div class="col-xs-6 col-md-6">    
@@ -95,7 +95,7 @@ header("location: $chemis");
             <img src="img/lock" class="img-relative">
            </div>
             <div class="col-xs-6 col-md-6">
-              <center><h2>In Chemis the most accurate results</h2>
+              <center><h2>With Chemis you'll have the most accurate results</h2>
            <img src="img/calculator" class="img-relative"> 
              </div>
             <div class="col-xs-6 col-md-6">

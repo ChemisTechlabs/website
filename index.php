@@ -66,9 +66,8 @@ include 'head.php';
                     <div id="myCarousel" class="carousel container slide">
                         <!-- Carousel items -->
                         <div class="carousel-inner">
-                            <div class="active item"><img src="img/chemis-logo.png" alt="" /></div>
-                            <div class="item"><img src="img/chemis-logo.png" alt="" /></div>
-                            <div class="item"><img src="img/chemis-logo.png" alt="" /></div>
+                            <div class="active item"><a href="#"><img src="img/chemis-logo.png" alt="" /></a></div>
+                            <div class="item"><a href="downloads.php"><img src="img/chemis-desktop-alpha.png" alt="" /></a></div>
                             <div class="item"><img src="img/chemis-logo.png" alt="" /></div>
                         </div>
                         <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
