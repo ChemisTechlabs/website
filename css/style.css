@@ -11,9 +11,9 @@
 	font-style: normal;
 }
 
-
 body{	
-	font-family: Colaborate, sans-serif;
+	
+	/*font-family: Colaborate, sans-serif;*/
     background-color:#f5f5f5;	
     padding-top:60px; 
 }
@@ -54,4 +54,12 @@ a:hover,a:focus{
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); 
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     border-radius: 8px;
+}
+
+.panel-info{
+	border-color: #e3e3e3;
+}
+
+.chemis-row-list{
+	margin-bottom: 10px;
 }

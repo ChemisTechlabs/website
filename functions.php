@@ -2,6 +2,7 @@
 include "dbinit.php";
 session_start();
 ob_start();
+
 function isLoggedIn() {
 $user = $_SESSION[$sess_name];
 	global $sess_name;
@@ -21,8 +22,10 @@ function db_connect() {
 	mysql_select_db($db_name);
 
 }
+
 db_connect();
 $user = $_SESSION[$sess_name];
+
 function show_login() {
 
 	global $users_table, $sess_name;
@@ -51,7 +54,7 @@ function show_login() {
 
 	if(!isLoggedIn()) {
 		// add header function if prefer
-		echo "<center><a href=\"index.php\"><img src=\"img/logo.png\" class=\"img-responsive\"></a></center><div class=\"row\">
+		echo "<div class=\"container\"><center><a href=\"index.php\"><img src=\"img/logo.png\" class=\"img-responsive\"></a></center><div class=\"row\">
 <div class=\"col-md-3 col-md-offset-5\">";	
 		if(!isset($_POST[submit])) {
 			echo "<form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
@@ -63,7 +66,7 @@ function show_login() {
 				<input type=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">
 				<br>										
 			  <input type=\"submit\" class=\"btn btn-large btn-primary btn-block\" name=\"submit\" value=\"Submit\"></div></div>";
-			// add footer function here
+			include 'foot.php';
 			die();
 		} else if(isset($_POST[submit]) && empty($_POST[username]) or empty($_POST[password])) {
 			// add header function here
@@ -75,7 +78,8 @@ function show_login() {
 			 <h5>Password</h5>
 				<input type=\"password\" name=\"password\" class=\"form-control\"  placeholder=\"Password\">	
 				<br>									
-			  <input type=\"submit\" class=\"btn btn-large btn-primary btn-block\" name=\"submit\" value=\"Submit\">";	
+			  <input type=\"submit\" class=\"btn btn-large btn-primary btn-block\" name=\"submit\" value=\"Submit\"></div></div>";
+                        include 'foot.php';
 			die();
 		} else if(isset($_POST[submit]) && !empty($_POST[username]) && !empty($_POST[password])) {
 			// Validate their login
@@ -91,7 +95,8 @@ function show_login() {
 			 <h5>Password</h5>
 				<input type=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">	
 				<br>									
-			  <input type=\"submit\" class=\"btn btn-large btn-primary btn-block\" class=\"form-control\" name=\"submit\" value=\"Submit\">";
+			  <input type=\"submit\" class=\"btn btn-large btn-primary btn-block\" class=\"form-control\" name=\"submit\" value=\"Submit\"></div></div>";
+                                include 'foot.php';
 				die();
 			} else {
 				//entered correct, create session and refresh page
@@ -149,4 +154,14 @@ function db_num($table, $condition) {
 	$result = @mysql_query("SELECT * FROM $table WHERE $condition");
 	return mysql_num_rows($result);
 }
+
+/*
+$lang_xml=null;
+        
+//return 
+function get_language_string($string_name,$language){
+    if($lang_xml==null){
+        
+    }
+}*/
 ?>

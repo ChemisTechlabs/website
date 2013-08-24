@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta charset="utf-8">
@@ -14,5 +12,11 @@
         <!--java-->
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.js"></script>
-        <script src="js/bootstrap-carousel.js"></script>   
+        <script src="js/bootstrap-carousel.js"></script> 
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.carousel').carousel({interval: 5000});
+            });
+        </script>
+        <script type="text/javascript" src="//vk.com/js/api/openapi.js?98"></script>
     </head>

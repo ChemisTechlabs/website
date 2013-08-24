@@ -1,11 +1,11 @@
 <?php   
 //$
-$num = 2; //news
+$num = 5; //news
 $ip_address = $_SERVER["REMOTE_ADDR"];
 $date = date("D M j G:i:s T Y");
 //Chemis app
-$chemis = "stable.jar";
-$alpha_chemis = "alpha.jar";
+$chemis = "alpha.php";
+$alpha_chemis = "releases/Chemis-Desktop-Alpha.zip";
 //tables
 $alpha_table = "alphatest";
 $users_table = "users";
