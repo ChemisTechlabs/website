@@ -29,7 +29,7 @@
                                     <input type=\"password\" class=\"form-control\" name=\"verify\">
                                 <h5>Email Address</h5>
                                     <input type=\"text\" class=\"form-control\" name=\"email\"><br>
-	  	<input type=\"submit\" class=\"btn btn-large btn-primary btn-block\" name=\"submit\" value=\"Submit\">";
+	  	<input type=\"submit\" class=\"btn btn-large btn-outline btn-block\" name=\"submit\" value=\"Submit\">";
                     } else if (isset($_POST[submit]) && empty($_POST[fname]) or empty($_POST[lname]) or empty($_POST[username]) or empty($_POST[password]) or empty($_POST[verify]) or empty($_POST[email])) {
 
                         echo "<span class=\"label label-danger\">Please enter all fields in the form</span>
@@ -49,7 +49,7 @@
 	    <h5>Email Address</h5>
 		<input type=\"text\" class=\"form-control\" name=\"email\">
 		<br>
-	  	<input type=\"submit\" class=\"btn btn-large btn-primary btn-block\" name=\"submit\" value=\"Submit\"></div></div>";
+	  	<input type=\"submit\" class=\"btn btn-large btn-outline btn-block\" name=\"submit\" value=\"Submit\"></div></div>";
                         include 'foot.php';
                     } else if (isset($_POST[submit]) && !empty($_POST[fname]) && !empty($_POST[lname]) && !empty($_POST[username]) && !empty($_POST[password]) && !empty($_POST[verify]) && !empty($_POST[email])) {
 

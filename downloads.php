@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-    <?php
-    include "functions.php";
-    include 'head.php';
-    ?>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.carousel').carousel({interval: 5000});
-        });
-    </script>
-    <body> 	   
-        <?php
-        include 'menu_bar.php';
-        ?>
+ <?php
+ include_once 'langs.php';
+ include "functions.php";
+ include 'head.php';
+ include 'menu_bar.php';
+ ?>
         <div class="container">
             <div class="row">
                 <div class="col-8">  
@@ -31,26 +22,26 @@
                     <center>
 
                         <form method="POST" action="<? echo $_SERVER['PHP_SELF']; ?>">
-                            <input type="submit" name="submit" class="btn btn-outline btn-lg" value="Download Chemis">
+                            <input type="submit" name="submit" class="btn btn-outline btn-lg" value="<?php echo $lang['D_DOWNLOAD']; ?>">
                         </form>	
                     </center>
                 </div>
             </div>
             <hr>
             <div class="col-xs-6 col-md-6">                  
-                <center><h3>Chemis is constantly updated</h3> 
+                <center><h3><?php echo $lang['D_CAL']; ?></h3> 
                     <img src="img/calendar.png" class="img-responsive"/> 
             </div>
             <div class="col-xs-6 col-md-6">    
-                <center> <h3>Our products are protected</h3>       
+                <center> <h3><?php echo $lang['D_LOC']; ?></h3>       
                     <img src="img/lock.png" class="img-responsive"/>
             </div>
             <div class="col-xs-6 col-md-6">
-                <center><h3>With Chemis you'll have the most accurate results</h3>
+                <center><h3><?php echo $lang['D_CALK']; ?></h3>
                     <img src="img/calculator.png" class="img-responsive"/> 
             </div>
             <div class="col-xs-6 col-md-6">
-                <center><h3>We care about users</h3>
+                <center><h3><?php echo $lang['D_USERS']; ?></h3>
                     <img src="img/user.png" class="img-responsive"/>  
             </div>          
         </div>

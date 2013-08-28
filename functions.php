@@ -38,14 +38,13 @@ function show_login() {
      <head>
          <title>Member Login Page</title>
          <meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\" />
-          <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
          <meta charset=\"utf-8\">
          <!--Css-->    
          <link href=\"css/style.css\" rel=\"stylesheet\"> 
          <link rel=\"shortcut icon\" href=\"css/favicon.ico\"> 
          <!--java-->
-          <script src=\"js/jquery.js\"></script>
-          <script src=\"js/bootstrap.js\"></script>           
+         <script src=\"js/bootstrap.js\"></script>           
       </head>"; 
       	    
 	if($_GET[action] == "logout") {
@@ -65,7 +64,7 @@ function show_login() {
 			 <h5>Password</h5>
 				<input type=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">
 				<br>										
-			  <input type=\"submit\" class=\"btn btn-large btn-primary btn-block\" name=\"submit\" value=\"Submit\"></div></div>";
+			  <input type=\"submit\" class=\"btn btn-large btn-outline btn-block\" name=\"submit\" value=\"Submit\"></div></div>";
 			include 'foot.php';
 			die();
 		} else if(isset($_POST[submit]) && empty($_POST[username]) or empty($_POST[password])) {
@@ -78,8 +77,8 @@ function show_login() {
 			 <h5>Password</h5>
 				<input type=\"password\" name=\"password\" class=\"form-control\"  placeholder=\"Password\">	
 				<br>									
-			  <input type=\"submit\" class=\"btn btn-large btn-primary btn-block\" name=\"submit\" value=\"Submit\"></div></div>";
-                        include 'foot.php';
+			  <input type=\"submit\" class=\"btn btn-large btn-outline btn-block\" name=\"submit\" value=\"Submit\"></div></div>";
+          include 'foot.php';
 			die();
 		} else if(isset($_POST[submit]) && !empty($_POST[username]) && !empty($_POST[password])) {
 			// Validate their login
@@ -95,8 +94,8 @@ function show_login() {
 			 <h5>Password</h5>
 				<input type=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">	
 				<br>									
-			  <input type=\"submit\" class=\"btn btn-large btn-primary btn-block\" class=\"form-control\" name=\"submit\" value=\"Submit\"></div></div>";
-                                include 'foot.php';
+			  <input type=\"submit\" class=\"btn btn-large btn-outline btn-block\" class=\"form-control\" name=\"submit\" value=\"Submit\"></div></div>";
+          include 'foot.php';
 				die();
 			} else {
 				//entered correct, create session and refresh page
@@ -154,14 +153,4 @@ function db_num($table, $condition) {
 	$result = @mysql_query("SELECT * FROM $table WHERE $condition");
 	return mysql_num_rows($result);
 }
-
-/*
-$lang_xml=null;
-        
-//return 
-function get_language_string($string_name,$language){
-    if($lang_xml==null){
-        
-    }
-}*/
 ?>

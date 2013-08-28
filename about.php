@@ -1,15 +1,8 @@
 <?php
+include_once 'langs.php';
 include "functions.php";
 include 'head.php';
-?>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('.carousel').carousel({interval: 5000});
-    });
-</script>
-<body> 	   
-    <?php
-    include 'menu_bar.php';
+include 'menu_bar.php';
     ?>
     <div class="container">
         <div class="row">

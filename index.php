@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
     <?php
+    include_once 'langs.php';
     include "functions.php";
-    include 'head.php';
+    include "head.php";
     ?>
-
-    <body> 
-
-        <!-- Facebook page widget -->
+            <!-- Facebook page widget -->
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0];
@@ -23,7 +19,6 @@
         <?php
         include 'menu_bar.php';
         ?>
-
         <div class="container">
             <div class="row">
                 <div class="col-lg-9">

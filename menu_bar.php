@@ -11,41 +11,49 @@
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="index.php">Home</a></li>
+                <li><a href="index.php"><?php echo $lang['MENU_HOME']; ?></a></li>
                 <li class="divider-vertical"></li>
-                <li><a href="downloads.php">Downloads</a></li>
+                <li><a href="downloads.php"><?php echo $lang['MENU_DOWNLOADS']; ?></a></li>
                 <li class="divider-vertical"></li>
-                <li><a href="about.php">About</a></li>
+                <li><a href="about.php"><?php echo $lang['MENU_ABOUT']; ?></a></li>
                 <li class="divider-vertical"></li>
-                <li><a href="contact.php">Contact</a></li>       
+                <li><a href="contact.php"><?php echo $lang['MENU_CONTACT']; ?></a></li>       
             </ul>
             <ul class="nav navbar-nav navbar-right">  
+              <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang['MENU_LANG']; ?><b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="?lang=en">English</a></li>
+          <li><a href="?lang=br">Portuguese</a></li>
+          <li><a href="?lang=ru">Русский</a></li>         
+        </ul>
+      </li>
                 <?
                 if (!isLoggedIn()) {
                     echo "<li class=\"dropdown\">
-                            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Login / Register<b class=\"caret\"></b></a>
+                            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">".$lang['MENU_LOGREG']." <b class=\"caret\"></b></a>
                                 <ul class=\"dropdown-menu\">
-                                    <li><a href=\"login.php\">Login</a></li>
-                                    <li><a href=\"join.php\">Register</a></li>
+                                    <li><a href=\"login.php\">".$lang['MENU_LOGIN']."</a></li>
+                                    <li><a href=\"join.php\">".$lang['MENU_REGISTER']."</a></li>
                                 </ul>
                           </li>";
                 } else {
                     $adm_menu = "";
                     if (isAdmin()) {
-                        $adm_menu = "<li><a href=\"admin\">Admin panel</a></li>";
+                        $adm_menu = "<li><a href=\"admin\">".$lang['MENU_ADMIN']."</a></li>";
                     }
 
                     echo "<li class=\"dropdown\"><a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">" . $user . "<b class=\"caret\"></b></a>
                             <ul class=\"dropdown-menu\">
-                                <li><a href=\"alpha.php\">Alpha test</a></li>
+                                <li><a href=\"alpha.php\">".$lang['MENU_ALPHA']."</a></li>
                                 $adm_menu
-                                <li><a href=\"edit.php\">Settings</a></li>
-                                <li><a href=\"logout.php\">Exit</a></li>
+                                <li><a href=\"edit.php\">".$lang['MENU_SETTINGS']."</a></li>
+                                <li><a href=\"logout.php\">".$lang['MENU_EXIT']."</a></li>
                             </ul>
                           </li>";
                 }
-                ?>        
-            </ul>
+                ?>            
+      </ul>
         </div>
     </nav>
 </header>
