@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Admin-Chemis</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <meta name="author" content="Никита Бережной" >
-    <!--Css-->    
-    <link href="../css/style.css" rel="stylesheet">     
-    <link rel="shortcut icon" href="../css/favicon.ico">
-     <!--java-->
-    <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.js"></script>    
-  </head>
-<body>
 <?php
+include "../head.php";
 include "../functions.php";
 if(!isLoggedIn()) {
 	show_login();
@@ -45,8 +31,7 @@ if(!isLoggedIn()) {
      if (@$_POST)
      {
          $posts_id = $_POST;
-	 //print_r($posts_id);
-	 foreach($posts_id as $post_id)
+	 	 foreach($posts_id as $post_id)
          {
 	     $query = "DELETE FROM `news` WHERE `id`='$post_id'";
 	     if (!mysql_query($query)) echo mysql_error();
@@ -57,7 +42,7 @@ if(!isLoggedIn()) {
 #############################################################################################################################################
 ?>
 <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
-   <nav class="navbar navbar-collapse navbar-fixed-top bs-docs-nav" role="navigation">
+<nav class="navbar navbar-collapse navbar-fixed-top bs-docs-nav" role="navigation">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
       <span class="sr-only">Toggle navigation</span>
@@ -87,7 +72,7 @@ if(!isLoggedIn()) {
 <div class="row-">
 <div class="col-lg-7">
 <?php
-    $page = $_GET['page'];
+$page = $_GET['page'];
 $result0 = mysql_query("SELECT COUNT(*) FROM $news_table");
 $temp = mysql_fetch_array($result0);
 $posts = $temp[0];
@@ -212,10 +197,9 @@ echo "<br><table class=\"table table-striped\">
 </div>
 </div>
 </div>
-<div class="modal-footer">
-<p>&copy; 2013 Chemis Team. <a href="http://vk.com/nikitoshi2013" target="_blank">Nikita Berezhnoj</a> &middot; <a href="http://vk.com/guilherme_caldas" target="_blank">Guilherme Caldas</a> &middot; 
-Ana Evangelho</p>
-</div>
+<?
+include "../foot.php";
+?>
 </body>
 </head>
 <?

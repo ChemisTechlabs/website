@@ -1,17 +1,5 @@
-<html>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Admin-Chemis</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <meta name="author" content="Никита Бережной" >
-    <!--Css-->    
-    <link href="../css/style.css" rel="stylesheet">     
-    <link rel="shortcut icon" href="../css/favicon.ico">    
-  </head>
-<body>
 <?php
+include "../head.php";
 $new_id = $_GET['new'];
 
 	$query = "SELECT * FROM `news` WHERE `id`='$new_id' LIMIT 1";

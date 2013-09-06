@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Admin-Chemis</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <meta name="author" content="Никита Бережной" >
-    <!--Css-->    
-    <link href="../css/style.css" rel="stylesheet">     
-    <link rel="shortcut icon" href="../css/favicon.ico">
-     <!--java-->
-    <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.js"></script>    
-  </head>
-<body>
+<?
+include "../head.php";
+?>
 <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
 <nav class="navbar navbar-collapse navbar-fixed-top bs-docs-nav" role="navigation">
   <div class="navbar-header">

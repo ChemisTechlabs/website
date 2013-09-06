@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Admin-Chemis</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <meta name="author" content="Никита Бережной" >
-    <!--Css-->    
-    <link href="../css/style.css" rel="stylesheet">     
-    <link rel="shortcut icon" href="../css/favicon.ico">  
-    </head>
-<body>
+<?php
+include "../head.php";
+?>
+  <script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+  plugins: [
+         "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+         "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+         "save table contextmenu directionality emoticons template paste textcolor"
+   ]
+ });
+</script>
 <?php
 include "../functions.php";
 if(!isLoggedIn()) {
@@ -68,7 +69,7 @@ $print_form = 0;
 	<div class="container">
    <div class="row">
     <div class="col-lg-10">	
-	 <form name="addform" action="<?=$phpself ?>" method="POST"> 
+<form name="addform" action="<?=$phpself ?>" method="POST"> 
  <textarea style=" min-width:700px;min-height:300px;" name="addtext" wrap="hard"></textarea>  
  <br><input class="btn btn-large btn-primary" type="submit" value="Add news">  
  <a class="btn btn-success" href="index.php">Admin center</a>

@@ -41,10 +41,10 @@ function show_login() {
          <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
          <meta charset=\"utf-8\">
          <!--Css-->    
-         <link href=\"css/style.css\" rel=\"stylesheet\"> 
-         <link rel=\"shortcut icon\" href=\"css/favicon.ico\"> 
+         <link href=\"../css/style.css\" rel=\"stylesheet\"> 
+         <link rel=\"shortcut icon\" href=\"../css/favicon.ico\"> 
          <!--java-->
-         <script src=\"js/bootstrap.js\"></script>           
+         <script src=\"../js/bootstrap.js\"></script>           
       </head>"; 
       	    
 	if($_GET[action] == "logout") {
@@ -53,11 +53,11 @@ function show_login() {
 
 	if(!isLoggedIn()) {
 		// add header function if prefer
-		echo "<div class=\"container\"><center><a href=\"index.php\"><img src=\"img/logo.png\" class=\"img-responsive\"></a></center><div class=\"row\">
+		echo "<div class=\"container\"><center><a href=\"index.php\"><img src=\"../img/logo.png\" class=\"img-responsive\"></a></center><div class=\"row\">
 <div class=\"col-md-3 col-md-offset-5\">";	
 		if(!isset($_POST[submit])) {
 			echo "<form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
-			<a href=\"join.php\" class=\"pull-right\">Registration</a>
+			<a href=\"../join.php\" class=\"pull-right\">Registration</a>
 			 <h2>Login</h2>
           <h5>User name</h5>
 			    <input type=\"text\" name=\"username\" class=\"form-control\" placeholder=\"Username\">
@@ -70,7 +70,7 @@ function show_login() {
 		} else if(isset($_POST[submit]) && empty($_POST[username]) or empty($_POST[password])) {
 			// add header function here
 			echo "<span class=\"label label-danger\">Please enter a username/password to login</span><form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
-			<a href=\"join.php\" class=\"pull-right\">Registration</a>
+			<a href=\"../join.php\" class=\"pull-right\">Registration</a>
 			 <h2>Login</h2>
           <h5>User name</h5>
 			    <input type=\"text\" name=\"username\" class=\"form-control\" placeholder=\"Username\">
@@ -87,7 +87,7 @@ function show_login() {
 				//not in database
 				// add header function here
 				echo "<span class=\"label label-danger\">Invalid username or password combination</span><form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
-			<a href=\"join.php\" class=\"pull-right\">Registration</a>
+			<a href=\"../join.php\" class=\"pull-right\">Registration</a>
 			 <h2>Login</h2>
           <h5>User name</h5>
 			    <input type=\"text\" name=\"username\" class=\"form-control\" placeholder=\"Username\">

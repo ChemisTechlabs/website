@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Edit news</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <meta name="author" content="Никита Бережной" >
-    <!--Css-->    
-    <link href="../css/style.css" rel="stylesheet">     
-    <link rel="shortcut icon" href="../css/favicon.ico">    
-  </head>
-<body>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+  plugins: [
+         "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+         "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+         "save table contextmenu directionality emoticons template paste textcolor"
+   ]
+ });
+</script>
 <?php	
 $date = date("d.m.Y H:i:s");
 echo "<div class=\"hero-unit\"><center>$date</center><p>\n";
