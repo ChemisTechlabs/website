@@ -70,7 +70,7 @@ $print_form = 0;
    <div class="row">
     <div class="col-lg-10">	
 <form name="addform" action="<?=$phpself ?>" method="POST"> 
- <textarea style=" min-width:700px;min-height:300px;" name="addtext" wrap="hard"></textarea>  
+ <textarea style="min-width:700px;min-height:300px;" name="addtext" wrap="hard"></textarea>  
  <br><input class="btn btn-large btn-primary" type="submit" value="Add news">  
  <a class="btn btn-success" href="index.php">Admin center</a>
    </div>

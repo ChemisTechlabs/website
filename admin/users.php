@@ -1,5 +1,16 @@
 <?
 include "../head.php";
+include("../functions.php"); 
+ if(!isLoggedIn()) {
+	show_login();
+} else {
+
+	if(!isAdmin()) {
+
+		//user is logged in but a regular user
+		echo "<h2 align=\"center\">Sorry, this page is for administrators only</h2>";
+
+	} else {
 ?>
 <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
 <nav class="navbar navbar-collapse navbar-fixed-top bs-docs-nav" role="navigation">
@@ -29,18 +40,6 @@ include "../head.php";
 </nav>
 </header>
 <?php
-include("../functions.php"); 
- if(!isLoggedIn()) {
-	show_login();
-} else {
-
-	if(!isAdmin()) {
-
-		//user is logged in but a regular user
-		echo "<h2 align=\"center\">Sorry, this page is for administrators only</h2>";
-
-	} else {
-	
 		if(!isset($_GET[action])) {
 
 			echo "

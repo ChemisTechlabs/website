@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
     <?php
-    include("functions.php");
-    include("head.php");
+    include "functions.php";
+    include "head.php";
     ?>
 
     <body>    
         <div class="container">
-            <center><a href="index.php"><img src="img/logo.png" class="img-responsive"></a></center>
+            <center><a href="index.php"><img src="../img/logo.png" class="img-responsive"></a></center>
             <div class="row">
                 <div class="col-md-3 col-md-offset-5">
                     <?php
                     if (!isset($_POST[submit])) {
 
                         echo "<form method=\"POST\" action=\"" . $_SERVER[PHP_SELF] . "\">
-                                <a href=\"login.php\" class=\"pull-right\">Login</a>
+                                <a href=\"../login.php\" class=\"pull-right\">Login</a>
                                 <h2>Register</h2>
                                 
                                 <h5>First Name</h5>
@@ -34,7 +32,7 @@
 
                         echo "<span class=\"label label-danger\">Please enter all fields in the form</span>
 		<form method=\"POST\" action=\"" . $_SERVER[PHP_SELF] . "\">
-	<a href=\"login.php\" class=\"pull-right\">Login</a>
+	<a href=\"../login.php\" class=\"pull-right\">Login</a>
 	  <h2>Register</h2>	 
      <h5>First Name</h5>
 	    <input type=\"text\" class=\"form-control\" name=\"fname\">
@@ -96,7 +94,7 @@
             </div>
         </div>
         <?php
-        include 'foot.php';
+        include "foot.php";
         ?>
     </body>
 </html>
