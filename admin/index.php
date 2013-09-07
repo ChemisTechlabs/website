@@ -82,7 +82,7 @@ $page = intval($page);
 if(empty($page) or $page < 0) $page = 1;
 if($page > $total) $page = $total;
 $start = $page * $num - $num;			
-$result = @mysql_query("SELECT * FROM $news_table ORDER BY id LIMIT $start , $num");
+$result = @mysql_query("SELECT * FROM $news_table ORDER BY id DESC LIMIT $start , $num");
 
     if (mysql_num_rows($result) == 0) {
  	     print "<center><h3><span class=\"label label-danger\">No news</span></h3></center><br>";
