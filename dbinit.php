@@ -1,6 +1,6 @@
 <?php   
 //$
-$num = 5; //news
+$num = 2; //news
 $ip_address = $_SERVER["REMOTE_ADDR"];
 $date = date("D M j G:i:s T Y");
 //Chemis app

@@ -82,21 +82,19 @@ $page = intval($page);
 if(empty($page) or $page < 0) $page = 1;
 if($page > $total) $page = $total;
 $start = $page * $num - $num;			
-$result = @mysql_query("SELECT * FROM $news_table ORDER BY id DESC LIMIT $start, $num");
+$result = @mysql_query("SELECT * FROM $news_table ORDER BY id LIMIT $start , $num");
 
-                if (!$result) {
-                    print "<center><br>error:" . mysql_error() . "<br></center>";
-                } elseif (mysql_num_rows($result) == 0) {
-                    print "<center><div class=\"alert alert-error\">No news</div></center>\n";
-                } else {
-                    $rows = array();
-                    while ($row = mysql_fetch_assoc($result)) {
-                        $rows[] = $row;
-                    }
-                    $rows = array_reverse($rows);
+    if (mysql_num_rows($result) == 0) {
+ 	     print "<center><h3><span class=\"label label-danger\">No news</span></h3></center><br>";
+   } else {            
+       $rows = array();
+   while ($row = mysql_fetch_assoc($result)) {
+       $rows[] = $row;
+     }
+                   
 	 echo "<form action=\"{$_SERVER["PHP_SELF"]}\" method=\"POST\" name=\"delete_checked\">\n";
-         foreach($rows as $row)
-         {                                                                                                                                      
+       $rows = $rows;
+  foreach ($rows as $row) {                                                                                                                                     
 	     print "<center><div class=\"panel panel-info\"><div class=\"panel-heading\"><h3 class=\"panel-title\">{$row['date']}</h3></div><div style=\"color:#800080;\">{$row['text']}</div><p>\n<a class=\"btn btn-danger\" href=\"index.php?do=delete&new={$row['id']}\" OnClick=\"return confirm('Delete this news?');\">Delete</a>&nbsp;<a class=\"btn btn-warning\" href=\"index.php?do=edit&new={$row['id']}\">Edit</a></center>\n";    
          }
 	 echo "</form>\n";

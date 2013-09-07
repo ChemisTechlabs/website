@@ -10,7 +10,7 @@
         <meta name="author" content="Никита Бережной" >
         <!--Css-->    
         <link href="../css/style.css" rel="stylesheet"> 
-        <link rel="shortcut icon" href="css/favicon.ico"> 
+        <link rel="shortcut icon" href="../css/favicon.ico"> 
         <!--java-->
         <script src="../js/jquery.js"></script>
         <script src="../js/bootstrap.js"></script>
