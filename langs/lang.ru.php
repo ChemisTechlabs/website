@@ -55,4 +55,9 @@ $lang['E_MPASS'] = 'Пароли не совпадают';
 $lang['E_ERRORS'] = 'Возникли следующие ошибки:';
 $lang['E_LSPASS'] = 'Пароль должен быть не меньше 8 символов';
 $lang['E_SE'] = 'Вы успешно обновили свой профиль!';
+//Сайт оффлайн
+$lang['O_TITLE'] = '<center><b>Господа! Идут технические работы на сервере. Авторизация недоступна.</b>
+<br>Вы можете следить за нами через <a href="http://vk.com/chemisproject" target="_blank">Вконтакте</a> или 
+<a href="https://www.facebook.com/chemisproject" target="_blank">Facebook</a></center>';
+$lang['O_AUTH'] = '<center><b>Ведуться работы на сервере. Авторизация не доступна.</b><center>';
 ?>

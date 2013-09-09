@@ -56,4 +56,9 @@ $lang['E_MPASS'] = 'The passwords you entered dont match';
 $lang['E_ERRORS'] = 'The following errors have occured while processing:';
 $lang['E_LSPASS'] = 'Make certain the passwords match and are at least 8 characters in length';
 $lang['E_SE'] = 'You successfully updated account!';
+//Site offline
+$lang['O_TITLE'] = '<center><b>Lord! Going technical work on the server. authorization is not available.</b>
+<br>You can follow us via <a href="http://vk.com/chemisproject" target="_blank">Вконтакте</a> or
+<a href="https://www.facebook.com/chemisproject" target="_blank">Facebook</a></center>';
+$lang['O_AUTH'] = '<center><b>Going technical work on the server. authorization is not available.</b><center>';
 ?>

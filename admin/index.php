@@ -143,6 +143,25 @@ $ln = $rowl[0];
       </div>
       <div class="alert alert-success">Downloads:<b> <? printf($nl+$ln) ?></b></div>
     </div>
+    <div class="col-lg-1">
+<form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+<input type="submit" name="online" class="btn btn-success"value="On site">
+</form>
+<?
+if(($_POST[online])) {
+ $update = @mysql_query("UPDATE $settings_table  SET status='online' ");
+ } 
+?> 
+<br>		
+<form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+<input type="submit" name="offline" class="btn btn-danger" value="Off site">
+</form>
+<?
+if(($_POST[offline])) {
+ $update = @mysql_query("UPDATE $settings_table SET  status='offline'");
+ } 	
+?>
+</div> 
 <?
 if($_GET[see] == "people") {
 echo "<br><table class=\"table table-striped\">

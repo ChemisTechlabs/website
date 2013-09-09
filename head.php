@@ -5,7 +5,8 @@
         <meta charset="utf-8">
         <title>Chemis Online</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
+        <meta name="keywords" content="Chemis, Chemis project, Калькулятор, Сalculator, Химия, chemistry">
+        <meta name="description" content="Chemis is a project of chemistry software, to helps chemists and students.">
         <meta name="version" content="Plum">
         <meta name="author" content="Никита Бережной" >
         <!--Css-->    

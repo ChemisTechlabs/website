@@ -9,7 +9,7 @@
             </button>
             <a class="navbar-brand" href="../"><img src="img/nav.png" class="img-responsive"></a>
         </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="index.php"><?php echo $lang['MENU_HOME']; ?></a></li>
                 <li class="divider-vertical"></li>
@@ -30,31 +30,45 @@
       </li>
                 <?
                 if (!isLoggedIn()) {
-                    echo "<li class=\"dropdown\">
+                	if (offline()) {
+                	echo "<li class=\"dropdown\">
                             <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">".$lang['MENU_LOGREG']." <b class=\"caret\"></b></a>
                                 <ul class=\"dropdown-menu\">
                                     <li><a href=\"login.php\">".$lang['MENU_LOGIN']."</a></li>
                                     <li><a href=\"join.php\">".$lang['MENU_REGISTER']."</a></li>
                                 </ul>
                           </li>";
+                       }  
                 } else {
-                    $adm_menu = "";
-                    if (isAdmin()) {
+                   if (isAdmin()) {
                         $adm_menu = "<li><a href=\"admin\">".$lang['MENU_ADMIN']."</a></li>";
                     }
-
+                     if (offline()) {
                     echo "<li class=\"dropdown\"><a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">" . $user . "<b class=\"caret\"></b></a>
                             <ul class=\"dropdown-menu\">
-                                <li><a href=\"alpha.php\">".$lang['MENU_ALPHA']."</a></li>
-                                $adm_menu
+                                <li><a href=\"alpha.php\">".$lang['MENU_ALPHA']."</a></li>";
+                               }
+                               echo $adm_menu;
+                              if (offline()) {
+                                echo "                                
                                 <li><a href=\"edit.php\">".$lang['MENU_SETTINGS']."</a></li>
                                 <li><a href=\"logout.php\">".$lang['MENU_EXIT']."</a></li>
                             </ul>
                           </li>";
                 }
+         }  
                 ?>            
       </ul>
-        </div>
+     </div>
     </nav>
 </header>
-
+  <?
+ if (offline()) {
+ 	} else {
+ 		echo "
+ 		<div class=\"alert alert-info\">  
+ ".$lang['O_TITLE']." 
+</div>
+<hr>";
+}
+?>

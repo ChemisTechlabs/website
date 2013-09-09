@@ -11,6 +11,7 @@ $alpha_table = "alphatest";
 $users_table = "users";
 $news_table = "news";
 $download_table = "downloads";
+$settings_table = "settings";
 // mysql settings
 $db_host = "localhost";
 $db_user = "lomuz";

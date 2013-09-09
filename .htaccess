@@ -1,0 +1,17 @@
+AddDefaultCharset UTF-8
+DefaultLanguage ru-RU
+
+Options -Indexes
+
+php_flag register_globals off
+php_flag short_open_tag On
+
+<IfModule mod_rewrite.c>
+
+SetEnv HTTP_MOD_REWRITE On
+
+RewriteEngine on
+
+ErrorDocument 404 /404.php
+
+</IfModule>

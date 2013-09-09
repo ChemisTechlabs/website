@@ -139,6 +139,24 @@ function isAdmin() {
 	}
 }
 
+function offline() {
+
+	global $settings_table;
+	
+	//Offline or online status site
+	//status = online - online 
+	//status = ofline - offline 
+	//hahahahahahahhahahahahaah
+	
+	$result = @mysql_query("SELECT status FROM $settings_table");
+	$row = mysql_fetch_array($result);
+	if($row[status] == "offline") {
+		return false;
+	} else if($row[status] == "online") {
+	  return true;
+	}
+}
+
 function checkEmail($email){
     return preg_match("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$^", $email);
 }
