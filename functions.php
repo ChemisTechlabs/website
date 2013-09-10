@@ -3,8 +3,11 @@ include "dbinit.php";
 session_start();
 ob_start();
 
-function isLoggedIn() {
+// Username
 $user = $_SESSION[$sess_name];
+
+function isLoggedIn() {
+
 	global $sess_name;
 
 	// check if session is intact
@@ -24,7 +27,6 @@ function db_connect() {
 }
 
 db_connect();
-$user = $_SESSION[$sess_name];
 
 function show_login() {
 
@@ -33,33 +35,20 @@ function show_login() {
 	// if user is not logged in, show the login form
 	    
 //Head
-	echo "<!DOCTYPE html>
- <html lang=\"en\">
-     <head>
-         <title>Member Login Page</title>
-         <meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\" />
-         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-         <meta charset=\"utf-8\">
-         <!--Css-->    
-         <link href=\"../css/style.css\" rel=\"stylesheet\"> 
-         <link rel=\"shortcut icon\" href=\"../css/favicon.ico\"> 
-         <!--java-->
-         <script src=\"../js/bootstrap.js\"></script>           
-      </head>"; 
+	include "head.php";
       	    
 	if($_GET[action] == "logout") {
 		logout();
 	}
 
-	if(!isLoggedIn()) {
-		// add header function if prefer
+	if(!isLoggedIn()) {		
 		echo "<div class=\"container\"><center><a href=\"index.php\"><img src=\"../img/logo.png\" class=\"img-responsive\"></a></center><div class=\"row\">
 <div class=\"col-md-3 col-md-offset-5\">";	
 		if(!isset($_POST[submit])) {
 			echo "<form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
 			<a href=\"../join.php\" class=\"pull-right\">Registration</a>
 			 <h2>Login</h2>
-          <h5>User name</h5>
+             <h5>User name</h5>
 			    <input type=\"text\" name=\"username\" class=\"form-control\" placeholder=\"Username\">
 			 <h5>Password</h5>
 				<input type=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">
@@ -68,11 +57,10 @@ function show_login() {
 			include 'foot.php';
 			die();
 		} else if(isset($_POST[submit]) && empty($_POST[username]) or empty($_POST[password])) {
-			// add header function here
-			echo "<span class=\"label label-danger\">Please enter a username/password to login</span><form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
+	  echo "<span class=\"label label-danger\">Please enter a username/password to login</span><form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
 			<a href=\"../join.php\" class=\"pull-right\">Registration</a>
 			 <h2>Login</h2>
-          <h5>User name</h5>
+             <h5>User name</h5>
 			    <input type=\"text\" name=\"username\" class=\"form-control\" placeholder=\"Username\">
 			 <h5>Password</h5>
 				<input type=\"password\" name=\"password\" class=\"form-control\"  placeholder=\"Password\">	
@@ -84,15 +72,14 @@ function show_login() {
 			// Validate their login
 			$result = @mysql_query("SELECT * FROM $users_table WHERE username='".$_POST[username]."' AND password='".md5($_POST[password])."'");
 			if(mysql_num_rows($result) < 1) {
-				//not in database
-				// add header function here
-				echo "<span class=\"label label-danger\">Invalid username or password combination</span><form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
+			//not in database		
+	 echo "<span class=\"label label-danger\">Invalid username or password combination</span><form method=\"POST\" action=\"".$_SERVER[PHP_SELF]."\">
 			<a href=\"../join.php\" class=\"pull-right\">Registration</a>
 			 <h2>Login</h2>
-          <h5>User name</h5>
+             <h5>User name</h5>
 			    <input type=\"text\" name=\"username\" class=\"form-control\" placeholder=\"Username\">
 			 <h5>Password</h5>
-				<input type=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">	
+			  <input type=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">	
 				<br>									
 			  <input type=\"submit\" class=\"btn btn-large btn-outline btn-block\" class=\"form-control\" name=\"submit\" value=\"Submit\"></div></div>";
           include 'foot.php';
@@ -148,11 +135,11 @@ function offline() {
 	//status = ofline - offline 
 	//hahahahahahahhahahahahaah
 	
-	$result = @mysql_query("SELECT status FROM $settings_table");
+	$result = @mysql_query("SELECT value FROM $settings_table WHERE id='1'");
 	$row = mysql_fetch_array($result);
-	if($row[status] == "offline") {
-		return false;
-	} else if($row[status] == "online") {
+	if($row[value] == "offline") {
+	  return false;
+	} else if($row[value] == "online") {
 	  return true;
 	}
 }

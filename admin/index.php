@@ -149,7 +149,7 @@ $ln = $rowl[0];
 </form>
 <?
 if(($_POST[online])) {
- $update = @mysql_query("UPDATE $settings_table  SET status='online' ");
+ $update = @mysql_query("UPDATE $settings_table  SET value='online' WHERE id='1'");
  } 
 ?> 
 <br>		
@@ -158,7 +158,7 @@ if(($_POST[online])) {
 </form>
 <?
 if(($_POST[offline])) {
- $update = @mysql_query("UPDATE $settings_table SET  status='offline'");
+ $update = @mysql_query("UPDATE $settings_table SET value='offline' WHERE id='1'");
  } 	
 ?>
 </div> 
