@@ -1,0 +1,31 @@
+.chemis-menu-bar{
+    background: none;
+    text-align: center;
+    position: fixed;
+}
+
+.chemis-menu-bar ul{
+    border-bottom: 1px groove gray;
+    width: 100%;
+}
+
+.chemis-menu-bar ul li{
+    
+}
+
+.chemis-page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#session-home{
+    background: blue;
+    height: 100%;
+}
+
+#session-about{
+    background: green;
+    height: 100%;
+}
