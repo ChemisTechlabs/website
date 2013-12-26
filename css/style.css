@@ -1,16 +1,103 @@
-.chemis-menu-bar{
-    background: none;
-    text-align: center;
-    position: fixed;
+@CHARSET "UTF-8";
+
+@font-face{
+	font-family: Colaborate-Thin;
+	src: url('Colaborate/ColabThi.ttf');
 }
 
-.chemis-menu-bar ul{
-    border-bottom: 1px groove gray;
+@font-face{
+	font-family: Colaborate-Light;
+	src: url('Colaborate/ColabLig.ttf');
+}
+
+@font-face{
+	font-family: Colaborate-Regular;
+	src: url('Colaborate/ColabReg.ttf');
+}
+
+@font-face{
+	font-family: Colaborate-Bold;
+	src: url('Colaborate/ColabBol.ttf');
+}
+
+@font-face{
+	font-family: Colaborate-Medium;
+	src: url('Colaborate/ColabMed.ttf');
+}
+
+
+body{
+    font-family: Colaborate-Regular;
+    color: #464646;
+    background: url(../img/bgtest2.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.pure-button{
+	background-color: #A379A3;
+	color: white;
+}
+
+.pure-button:hover{
+	background-color: #BE8EBF;
+}
+
+.pure-button:active{
+	background-color: #E5AAE6;
+}
+
+.chemis-menu-container{
     width: 100%;
+    padding-left: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    position: static;
+    position: fixed;
+    background-color: /*#A379A3*/ #563D7C;
+    z-index: 1;
 }
 
-.chemis-menu-bar ul li{
-    
+.chemis-menu-bar{
+    border-bottom: 1px groove lightgray;
+    background: none!important;
+}
+
+.chemis-menu-bar li{
+    margin-left: 0!important;
+    text-align:center;
+}
+
+.chemis-menu-bar li a{
+    color: white!important;
+    border-radius: 0.2em;
+}
+
+.chemis-menu-bar li a:hover{
+    color: #464646!important;
+    background: #F5F5F5!important;
+}
+
+.chemis-menu-bar a:focus, 
+.chemis-menu-bar li a:active,
+.chemis-menu-bar .pure-menu-selected a{
+    color: #464646!important;
+    background: #F5F5F5!important;
+}
+
+.chemis-logo{
+    float: left;
+    height: 2.4em;
+    margin-right: 1em;
+}
+
+.chemis-logo img{
+    height: 2.1em;
+}
+
+.chemis-login-link{
+    float: right;
+    display: inline-block; 
+    margin-right: 1em;
 }
 
 .chemis-page{
@@ -20,12 +107,41 @@
     text-align: center;
 }
 
+.margin-container{
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.session, .session h2, .session p{
+    font-family: Colaborate-Light;
+}
+
 #session-home{
-    background: blue;
     height: 100%;
+    /*background: #F5F5F5;*/
+}
+
+#session-home #home-text{
+    font-family: Colaborate-Regular;
+    font-size: 400%;
+    top: 20em;
+    margin-top: 25%;
+    color: #ececec;
+    text-shadow: 1px 1px 1px #464646;
 }
 
 #session-about{
-    background: green;
-    height: 100%;
+    background: #F5F5F5;
+}
+
+#session-download{
+    color: white;
+    background: #563D7C;
+}
+
+#session-contact{
+    color: #ececec;
+    background: #464646;
 }
