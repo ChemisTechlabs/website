@@ -2,27 +2,47 @@
 
 @font-face{
 	font-family: Colaborate-Thin;
+<<<<<<< HEAD
 	src: url('fonts/ColabThi.ttf');
+=======
+	src: url('Colaborate/ColabThi.ttf');
+>>>>>>> 4de0e9be06766de96ebe80632b239ffc02ee97dc
 }
 
 @font-face{
 	font-family: Colaborate-Light;
+<<<<<<< HEAD
 	src: url('fonts/ColabLig.ttf');
+=======
+	src: url('Colaborate/ColabLig.ttf');
+>>>>>>> 4de0e9be06766de96ebe80632b239ffc02ee97dc
 }
 
 @font-face{
 	font-family: Colaborate-Regular;
+<<<<<<< HEAD
 	src: url('fonts/ColabReg.ttf');
+=======
+	src: url('Colaborate/ColabReg.ttf');
+>>>>>>> 4de0e9be06766de96ebe80632b239ffc02ee97dc
 }
 
 @font-face{
 	font-family: Colaborate-Bold;
+<<<<<<< HEAD
 	src: url('fonts/ColabBol.ttf');
+=======
+	src: url('Colaborate/ColabBol.ttf');
+>>>>>>> 4de0e9be06766de96ebe80632b239ffc02ee97dc
 }
 
 @font-face{
 	font-family: Colaborate-Medium;
+<<<<<<< HEAD
 	src: url('fonts/ColabMed.ttf');
+=======
+	src: url('Colaborate/ColabMed.ttf');
+>>>>>>> 4de0e9be06766de96ebe80632b239ffc02ee97dc
 }
 
 
@@ -94,7 +114,10 @@ a:hover{
 .chemis-menu-bar li a{
     color: white!important;
     border-radius: 0.2em;
+<<<<<<< HEAD
     text-decoration: none;
+=======
+>>>>>>> 4de0e9be06766de96ebe80632b239ffc02ee97dc
 }
 
 .chemis-menu-bar li a:hover{
