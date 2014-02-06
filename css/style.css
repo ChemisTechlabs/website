@@ -1,0 +1,227 @@
+@CHARSET "UTF-8";
+
+@font-face{
+	font-family: Colaborate-Thin;
+	src: url('fonts/ColabThi.ttf');
+}
+
+@font-face{
+	font-family: Colaborate-Light;
+	src: url('fonts/ColabLig.ttf');
+}
+
+@font-face{
+	font-family: Colaborate-Regular;
+	src: url('fonts/ColabReg.ttf');
+}
+
+@font-face{
+	font-family: Colaborate-Bold;
+	src: url('fonts/ColabBol.ttf');
+}
+
+@font-face{
+	font-family: Colaborate-Medium;
+	src: url('fonts/ColabMed.ttf');
+}
+
+
+body{
+    font-family: Colaborate-Regular;
+    color: #464646;
+    background: url(../img/bgtest2.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+a{
+    color: #563D7C;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.pure-button{
+	background-color: #A379A3;
+	color: white;
+}
+
+.pure-button:hover{
+	background-color: #BE8EBF;
+}
+
+.pure-button:active{
+	background-color: #E5AAE6;
+}
+
+.pure-button-blue{
+    background-color: #A379A3;
+	color: white;
+}
+
+.pure-button-cyan{
+    background-color: #A379A3;
+	color: white;
+}
+
+.pure-button-gray{
+    background-color: #A379A3;
+	color: white;
+}
+
+.chemis-menu-container{
+    width: 100%;
+    padding-left: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    position: static;
+    position: fixed;
+    background-color: /*#A379A3*/ #563D7C;
+    z-index: 1;
+}
+
+.chemis-menu-bar{
+    border-bottom: 1px groove lightgray;
+    background: none!important;
+}
+
+.chemis-menu-bar li{
+    margin-left: 0!important;
+    text-align:center;
+}
+
+.chemis-menu-bar li a{
+    color: white!important;
+    border-radius: 0.2em;
+    text-decoration: none;
+}
+
+.chemis-menu-bar li a:hover{
+    color: #464646!important;
+    background: #F5F5F5!important;
+}
+
+.chemis-menu-bar a:focus, 
+.chemis-menu-bar li a:active,
+.chemis-menu-bar .pure-menu-selected a{
+    color: #464646!important;
+    background: #F5F5F5!important;
+}
+.chemis-logo{
+    float: left;
+    height: 2.4em;
+    margin-right: 1em;
+}
+
+.chemis-logo img{
+    height: 2.1em;
+}
+
+.chemis-login-link{
+    float: right;
+    display: inline-block; 
+    margin-right: 1em;
+}
+
+.chemis-page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.chemis-list{
+    list-style: none;
+    padding: 0;
+}
+
+.chemis-list li{
+    margin-top: 1em;
+    width: 100%;    
+}
+
+.chemis-list li > a{
+    text-align: left;
+    display: table;
+    width: 100%;
+    box-shadow: 5px 5px 10px #696969;
+    transition: box-shadow 0.3s;
+}
+
+.chemis-list li > a:hover{
+    box-shadow: 0px 0px 10px #696969;
+    transition: box-shadow 0.3s;
+}
+
+.chemis-list li > a > img{
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.chemis-list li > a > span{
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.chemis-email-link{
+    background-color: #FFBD66;
+    padding: 0.5em;
+    color: white;
+    text-shadow: 1px 0px 1px gray;
+}
+
+.chemis-vk-link{
+    background-color: #89C3FF;
+    padding: 0.5em;
+    color: white;
+    text-shadow: 1px 0px 1px gray;
+}
+
+.chemis-facebook-link{
+    background-color: #80A8FF;
+    padding: 0.5em;
+    color: white;
+    text-shadow: 1px 0px 1px gray;
+}
+
+.margin-container{
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.session, .session h2, .session p{
+    font-family: Colaborate-Light;
+}
+
+#session-home{
+    height: 100%;
+    /*background: #F5F5F5;*/
+}
+
+#session-home #home-text{
+    font-family: Colaborate-Regular;
+    font-size: 400%;
+    top: 20em;
+    margin-top: 25%;
+    color: #ececec;
+    text-shadow: 1px 1px 1px #464646;
+}
+
+#session-about{
+    background: #F5F5F5;
+    box-shadow: 0px -5px 10px #696969;
+}
+
+#session-download{
+    color: white;
+    background: #563D7C;
+    box-shadow: 0px -5px 10px #696969;
+}
+
+#session-contact{
+    background: #F5F5F5;
+    box-shadow: 0px -5px 10px #696969;
+}
