@@ -2,27 +2,27 @@
 
 @font-face{
 	font-family: Colaborate-Thin;
-	src: url('Colaborate/ColabThi.ttf');
+	src: url('fonts/ColabThi.ttf');
 }
 
 @font-face{
 	font-family: Colaborate-Light;
-	src: url('Colaborate/ColabLig.ttf');
+	src: url('fonts/ColabLig.ttf');
 }
 
 @font-face{
 	font-family: Colaborate-Regular;
-	src: url('Colaborate/ColabReg.ttf');
+	src: url('fonts/ColabReg.ttf');
 }
 
 @font-face{
 	font-family: Colaborate-Bold;
-	src: url('Colaborate/ColabBol.ttf');
+	src: url('fonts/ColabBol.ttf');
 }
 
 @font-face{
 	font-family: Colaborate-Medium;
-	src: url('Colaborate/ColabMed.ttf');
+	src: url('fonts/ColabMed.ttf');
 }
 
 
@@ -94,6 +94,7 @@ a:hover{
 .chemis-menu-bar li a{
     color: white!important;
     border-radius: 0.2em;
+    text-decoration: none;
 }
 
 .chemis-menu-bar li a:hover{
