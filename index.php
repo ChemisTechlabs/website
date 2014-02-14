@@ -46,7 +46,7 @@
     <div class="pure-g-r chemis-page">
         <div id="session-home" class="pure-u-1 session">
             <div id="home-text">
-                <span>A solução pode ser... mais simples do que parece!</span>
+                <span>A solução pode ser mais simples do que parece!</span>
             </div>
         </div>
 
@@ -57,25 +57,25 @@
                         <img src="img/calculator.png">
                         <h2>Praticidade ao seu alcance...</h2>
                         <p>
-                            Feito para simplificar seus cálculos, Chemis resolve em segundos, equações complexas que levariam até minutos para serem concluídas.
+                            Feito para facilitar seus cálculos, Chemis resolve em segundos as equações mais trabalhosas. Economize tempo e chegue mais rapidamente ao resultado final, utilizando apenas uma ferramenta!
                         </p>
                     </div>
                 </div>
                 <div class="pure-u-1-3">
                     <div class="margin-container">
-                        <img src="img/mobile.png">
-                        <h2>Sempre do seu lado...</h2>
+                        <img src="img/smartphone.png">
+                        <h2>Sempre ao seu lado...</h2>
                         <p>
-                            Chemis é disponível para as principais plataformas do mercado, como Android, Windows, Mac OS, Linux e conta com a versão online, para você usar sem precisar baixar.
+                            Chemis está disponível para as principais plataformas do mercado: Android, Windows, Mac OS, e Linux. Contamos também com a versão online, para você usar sem precisar baixar.
                         </p>
                     </div>
                 </div>
                 <div class="pure-u-1-3">
                     <div class="margin-container">
-                        <img src="img/github.png">
+                        <img src="img/present.png">
                         <h2>Todo seu...</h2>
                         <p>
-                            Pensando na sua liberdade, Chemis é um software sob licensa GNU/GPL, ou seja, você pode usar, copiar, compartilhar, modificar... E o melhor de tudo: É completamente gratuíto!
+                            Pensando na sua liberdade, Chemis é um software sob licença GNU/GPL - ou seja, você pode usar, copiar, compartilhar, modificar... E o melhor de tudo: É completamente gratuito!
                         </p>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
                     <div class="margin-container">
                         <img src="img/download.png">
                         <h2>É de graça, é livre, é seu!</h2>
-                        <p>Baixe agora mesmo Chemis para sua plataforma ou utilize a versão online, sem baixar...
+                        <p>Baixe agora mesmo Chemis para sua plataforma ou utilize a versão online, sem baixar.
                         </p>
                     </div>
                 </div>
@@ -161,15 +161,16 @@
                 <div class="pure-u-1-4"></div>
                 <div class="pure-u-1-2">
                     <div class="margin-container" style="padding-bottom: 1em;">
-                        <img src="img/email.png">
-                        <h3>Dúvidas, sujestões? Entre em contato...</h3>
+                        <img src="img/mail.png">
+                        <h3>Dúvidas? Sugestões? Entre em contato conosco!</h3>
                         <p>
                             Sua opinião é essencial para que Chemis continue melhorando! Envie suas sugestões e críticas por email ou para nossos grupos nas redes sociais.
                         </p>
                     </div>
                 </div>
                 <div class="pure-u-1-4"></div>
-                <div class="pure-u">
+                <div class="pure-u-1-3"></div>
+                <div class="pure-u-1-3">
                     <div class="margin-container">
                         <ul class="chemis-list">
                             <li>
@@ -193,6 +194,7 @@
                         </ul>
                     </div>
                 </div>
+                <div class="pure-u-1-3"></div>
             </div>
         </div>
     </div>

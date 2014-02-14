@@ -160,7 +160,7 @@ a:hover{
 
 .chemis-list li > a > span{
     vertical-align: middle;
-    display: table-cell;
+    display:table-cell;
 }
 
 .chemis-email-link{
@@ -201,7 +201,7 @@ a:hover{
 }
 
 #session-home #home-text{
-    font-family: Colaborate-Regular;
+    font-family: Colaborate-Thin;
     font-size: 400%;
     top: 20em;
     margin-top: 25%;
