@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <title>ChemisProject</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Chemis, Chemis project, Калькулятор, Calculator, Химия, chemistry, Química, Dixon, Test Q">
+    <meta name="keywords" content="Chemis, Chemis project, Калькулятор, Calculator, Химия, chemistry, Química, Dixon, Outlier, Test Q, никита, бережной, guilherme caldas, nik.pr2012@gmail.com, guilhermecaldas@yandex.com">
     <meta name="description" content="Chemis is a project of chemistry software, to helps chemists and students.">
-    <meta name="version" content="Plum">
-    <meta name="author" content="Никита Бережной, Guilherme Caldas">
+    <meta name="version" content="Nasikabatrachus sahyadrensis">
+    <meta name="author" content="Guilherme Caldas, Никита Бережной, Ana Carolina" >
     <!--Css-->
     <link href="css/pure-min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
