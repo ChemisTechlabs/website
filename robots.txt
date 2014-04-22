@@ -1,0 +1,7 @@
+User-agent: Yandex
+Crawl-delay: 3
+Disallow: /admin/
+
+User-agent: *
+Crawl-delay: 3
+Disallow: /admin/

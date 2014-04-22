@@ -3,7 +3,7 @@
 @font-face {
 	font-family: 'Colaborate-Thin';
 	src: url('Colaborate/ColabThi.eot');
-	src: local('☺'), url('Colaborate/ColabThi.woff') format('woff'), url('Colaborate/ColabThi.ttf') format('truetype'), url('Colaborate/ColabThi.svg') format('svg');
+	src: url('Colaborate/ColabThi.woff') format('woff'), url('Colaborate/ColabThi.ttf') format('truetype'), url('Colaborate/ColabThi.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -11,7 +11,7 @@
 @font-face {
 	font-family: 'Colaborate-Light';
 	src: url('Colaborate/ColabLig.eot');
-	src: local('☺'), url('Colaborate/ColabLig.woff') format('woff'), url('Colaborate/ColabLig.ttf') format('truetype'), url('Colaborate/ColabLig.svg') format('svg');
+	src: url('Colaborate/ColabLig.woff') format('woff'), url('Colaborate/ColabLig.ttf') format('truetype'), url('Colaborate/ColabLig.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -19,7 +19,7 @@
 @font-face {
 	font-family: 'Colaborate-Regular';
 	src: url('Colaborate/ColabReg.eot');
-	src: local('☺'), url('Colaborate/ColabReg.woff') format('woff'), url('Colaborate/ColabReg.ttf') format('truetype'), url('Colaborate/ColabReg.svg') format('svg');
+	src: url('Colaborate/ColabReg.woff') format('woff'), url('Colaborate/ColabReg.ttf') format('truetype'), url('Colaborate/ColabReg.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -27,7 +27,7 @@
 @font-face {
 	font-family: 'Colaborate-Bold';
 	src: url('Colaborate/ColabBol.eot');
-	src: local('☺'), url('Colaborate/ColabBol.woff') format('woff'), url('Colaborate/ColabBol.ttf') format('truetype'), url('Colaborate/ColabBol.svg') format('svg');
+	src: url('Colaborate/ColabBol.woff') format('woff'), url('Colaborate/ColabBol.ttf') format('truetype'), url('Colaborate/ColabBol.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -35,7 +35,7 @@
 @font-face {
 	font-family: 'Colaborate-Medium';
 	src: url('Colaborate/ColabMed.eot');
-	src: local('☺'), url('Colaborate/ColabMed.woff') format('woff'), url('Colaborate/ColabMed.ttf') format('truetype'), url('Colaborate/ColabMed.svg') format('svg');
+	src: url('Colaborate/ColabMed.woff') format('woff'), url('Colaborate/ColabMed.ttf') format('truetype'), url('Colaborate/ColabMed.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -43,7 +43,7 @@
 body{
     font-family: Colaborate-Regular,DejaVu,sans-serif;
     color: #464646;
-    background: url(../img/bgtest2.jpg) no-repeat center center fixed;
+    /*background: url(../img/bgtest2.jpg) no-repeat center center fixed;*/
     background-size: cover;
 }
 
@@ -54,6 +54,7 @@ a{
 
 a:hover{
     text-decoration: underline;
+	
 }
 
 .pure-button{
@@ -226,16 +227,14 @@ a:hover{
 
 #session-about{
     background: #F5F5F5;
-    box-shadow: 0px -5px 10px #696969;
 }
 
 #session-download{
     color: white;
     background: #563D7C;
-    box-shadow: 0px -5px 10px #696969;
 }
 
 #session-contact{
     background: #F5F5F5;
-    box-shadow: 0px -5px 10px #696969;
+	box-shadow: 0px -5px 10px rgba(19, 18, 20, 0.30);
 }
