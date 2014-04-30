@@ -5,15 +5,11 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<meta charset="utf-8">
 	<title>ChemisProject</title>
-	<?php
-		include_once 'head.php';
-	?>
+	<?php include_once 'head.php'; ?>
 </head>
 
 <body>
-	<?php
-		include_once 'header.php';
-	?>
+	<?php include_once 'header.php'; ?>
 	<div id="chemis-page" class="pure-g-r">
 		<div id="session-home" class="pure-u-1 session">
 			<div id="home-content">
@@ -72,14 +68,28 @@
                 </div-->
 			</div>
 		</div>
-
+		<div id="session-online" class="pure-u-1 session">
+			<div class="pure-g-r">
+				<div class="pure-u-1-3">
+					<div class="margin-container">
+						<img src="img/cloud.png">
+						<h2>Chemis em qualquer lugar!</h2>
+						<p>
+							Utilize agora mesmo a versão online, sem baixar.
+						</p>
+						<a href="http://online.chemis.org" title="ChemisOnline" class="pure-button">Ir para ChemisOnline</a>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div id="session-download" class="pure-u-1 session">
 			<div class="pure-g-r">
 				<div class="pure-u-1">
 					<div class="margin-container">
 						<img src="img/download.png">
 						<h2>É de graça, é livre, é seu!</h2>
-						<p>Baixe agora mesmo Chemis para sua plataforma ou utilize a versão online, sem baixar.
+						<p>
+							Baixe agora mesmo Chemis para sua plataforma.
 						</p>
 					</div>
 				</div>
@@ -115,14 +125,14 @@
 						<span>Em breve</span>
 					</div>
 				</div>
-                <div class="pure-u-1-4 pure-hidden-desktop">
-                    <div class="margin-container">
-                        <img src="img/android.png">
-                        <h4>Chemis para Android</h4>
-                        <!--button class="pure-button">Download</button-->
+				<div class="pure-u-1-4 pure-hidden-desktop">
+					<div class="margin-container">
+						<img src="img/android.png">
+						<h4>Chemis para Android</h4>
+						<!--button class="pure-button">Download</button-->
 						<span>Em breve</span>
-                    </div>
-                </div>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -169,24 +179,29 @@
 		</div>
 		<footer id="session-footer" class="pure-u-1 session">
 			<p>ChemisProject ©All Rights reserved</p>
-			<p>ChemisProject is an open source project under <a href="http://www.gnu.org/licenses/gpl-2.0.html" title="GNU GPL2" target="_blank">GNU General Public Liscense Version 2</a></p>
+			<p>ChemisProject is an open source project under
+				<a href="http://www.gnu.org/licenses/gpl-2.0.html" title="GNU GPL2" target="_blank">GNU General Public Liscense Version 2</a>
+			</p>
 		</footer>
 	</div>
 </body>
 <script>
-	var menuOpen=false;
-	function openMenu(){
-		if(menuOpen){
+	var menuOpen = false;
+
+	function openMenu() {
+		if (menuOpen) {
 			$("#chemis-tool-bar").removeClass("open");
-			menuOpen=false;
-		}else{
+			menuOpen = false;
+		} else {
 			$("#chemis-tool-bar").addClass("open");
-			menuOpen=true;
+			menuOpen = true;
 		}
 	}
-	
-	$("#chemis-tool-bar li").click(function(){openMenu()});
-	
+
+	$("#chemis-tool-bar li").click(function() {
+		openMenu()
+	});
+
 	function setItemSelected(item) {
 		$("#chemis-tool-bar li").removeClass("pure-menu-selected");
 		$(item).addClass("pure-menu-selected");
