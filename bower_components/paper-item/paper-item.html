@@ -5,9 +5,7 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-
-<!--
+--><!--
 
 Material Design: <a href="http://www.google.com/design/spec/components/menus.html">Menus</a>
 
@@ -39,13 +37,11 @@ Example:
 @element paper-item
 @extends paper-button-base
 @status unstable
--->
-
-<link href="../polymer/polymer.html" rel="import">
+--><html><head><link href="../polymer/polymer.html" rel="import">
 <link href="../paper-button/paper-button-base.html" rel="import">
 <link href="../paper-ripple/paper-ripple.html" rel="import">
 
-<polymer-element name="paper-item" extends="paper-button-base">
+</head><body><polymer-element name="paper-item" extends="paper-button-base">
 
   <template>
 
@@ -99,48 +95,12 @@ Example:
     </style>
 
     <!-- this div is needed to position the ripple behind text content -->
-    <div class="button-content" relative layout horizontal center>
+    <div class="button-content" relative="" layout="" horizontal="" center="">
       <content></content>
     </div>
 
   </template>
 
-  <script>
-    Polymer({
-
-      publish: {
-
-        /**
-         * If true, the button will be styled with a shadow.
-         *
-         * @attribute raised
-         * @type boolean
-         * @default false
-         */
-        raised: false,
-
-        /**
-         * By default the ripple emanates from where the user touched the button.
-         * Set this to true to always center the ripple.
-         *
-         * @attribute recenteringTouch
-         * @type boolean
-         * @default false
-         */
-        recenteringTouch: false,
-
-        /**
-         * By default the ripple expands to fill the button. Set this to false to
-         * constrain the ripple to a circle within the button.
-         *
-         * @attribute fill
-         * @type boolean
-         * @default true
-         */
-        fill: true
-
-      }
-
-    });
-  </script>
+  <script src="paper-item.html.0.js"></script>
 </polymer-element>
+</body></html>

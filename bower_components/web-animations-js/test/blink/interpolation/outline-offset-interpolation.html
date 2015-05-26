@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<meta charset="UTF-8">
+<!DOCTYPE html><html><head><meta charset="UTF-8">
 <style>
 .target {
   width: 50px;
@@ -14,22 +13,10 @@
   margin-right: 18px;
 }
 </style>
-<body>
+</head><body>
 <script src="../testharness/testharness.js"></script>
 <script src="../testharness/testharnessreport.js"></script>
 <script src="resources/interpolation-test.js"></script>
-<script>
-assertInterpolation({
-  property: 'outline-offset',
-  from: '-5px',
-  to: '5px'
-}, [
-  {at: -0.3, is: '-8px'},
-  {at: 0, is: '-5px'},
-  {at: 0.3, is: '-2px'},
-  {at: 0.6, is: '1px'},
-  {at: 1, is: '5px'},
-  {at: 1.5, is: '10px'},
-]);
-</script>
-</body>
+<script src="outline-offset-interpolation.html.0.js"></script>
+
+</body></html>

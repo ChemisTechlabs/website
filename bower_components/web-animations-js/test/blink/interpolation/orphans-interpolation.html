@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<body>
+<!DOCTYPE html><html><head></head><body>
 <style>
 .target {
   width: 100px;
@@ -11,18 +10,5 @@
 <script src="../testharness/testharness.js"></script>
 <script src="../testharness/testharnessreport.js"></script>
 <script src="resources/interpolation-test.js"></script>
-<script>
-assertInterpolation({
-  property: 'orphans',
-  from: '10',
-  to: '1'
-}, [
-  {at: -0.5, is: '15'},
-  {at: 0, is: '10'},
-  {at: 0.3, is: '7'},
-  {at: 0.7, is: '4'},
-  // Only positive integers are valid
-  {at: 1, is: '1'},
-  {at: 1.5, is: '1'}
-]);
-</script>
+<script src="orphans-interpolation.html.0.js"></script>
+</body></html>

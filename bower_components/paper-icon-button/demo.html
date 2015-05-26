@@ -1,11 +1,8 @@
-<!doctype html>
-<!--
+<!DOCTYPE html><!--
 Copyright 2013 The Polymer Authors. All rights reserved.
 Use of this source code is governed by a BSD-style
 license that can be found in the LICENSE file.
--->
-<html>
-  <head>
+--><html><head>
     <title>paper-icon-button</title>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
     <script src="../webcomponentsjs/webcomponents.js"></script>
@@ -13,7 +10,7 @@ license that can be found in the LICENSE file.
     <link rel="import" href="../core-icons/core-icons.html">
     <link rel="import" href="paper-icon-button.html">
 
-    <style shim-shadowdom>
+    <style shim-shadowdom="">
       body {
         font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
         font-size: 14px;
@@ -67,7 +64,7 @@ license that can be found in the LICENSE file.
 
   </head>
 
-  <body unresolved onclick="clickAction(event);">
+  <body unresolved="" onclick="clickAction(event);">
 
     <column>
 
@@ -78,7 +75,7 @@ license that can be found in the LICENSE file.
         <paper-icon-button icon="menu" title="menu"></paper-icon-button>
         <paper-icon-button icon="arrow-back" title="arrow-back"></paper-icon-button>
         <paper-icon-button icon="arrow-forward" title="arrow-forward"></paper-icon-button>
-        <paper-icon-button disabled icon="clear" title="clear"></paper-icon-button>
+        <paper-icon-button disabled="" icon="clear" title="clear"></paper-icon-button>
 
       </section>
 
@@ -133,20 +130,8 @@ license that can be found in the LICENSE file.
       </section>
     </column>
 
-    <script>
+    <script src="demo.html.0.js"></script>
 
-      function clickAction(e) {
-        var t = e.target;
-        if (t.localName === 'paper-icon-button') {
-          if (t.hasAttribute('disabled')) {
-            console.error('should not be able to click disabled button', t);
-          } else {
-            console.log('click', t);
-          }
-        }
-      }
+  
 
-    </script>
-
-  </body>
-</html>
+</body></html>

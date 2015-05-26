@@ -6,10 +6,7 @@
     The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
     Code distributed by Google as part of the polymer project is also
     subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-<!doctype html>
-<html>
-<head>
+--><!DOCTYPE html><html><head>
 
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
 
@@ -23,7 +20,7 @@
   <link href="paper-input.html" rel="import">
   <link href="paper-char-counter.html" rel="import">
 
-  <style shim-shadowdom>
+  <style shim-shadowdom="">
 
     body {
       font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
@@ -110,7 +107,7 @@
   </style>
 
 </head>
-<body unresolved>
+<body unresolved="">
 
   <section>
 
@@ -122,11 +119,11 @@
 
     <br>
 
-    <paper-input label="floating label" floatingLabel></paper-input>
+    <paper-input label="floating label" floatinglabel=""></paper-input>
 
     <br>
 
-    <paper-input label="disabled" disabled></paper-input>
+    <paper-input label="disabled" disabled=""></paper-input>
 
   </section>
 
@@ -142,7 +139,7 @@
 
     <br>
 
-    <paper-input-decorator label="with core-input + floatingLabel" floatingLabel>
+    <paper-input-decorator label="with core-input + floatingLabel" floatinglabel="">
       <input is="core-input">
     </paper-input-decorator>
 
@@ -156,7 +153,7 @@
 
     <br>
 
-    <paper-input-decorator label="with autogrowing text area + floatingLabel" floatingLabel>
+    <paper-input-decorator label="with autogrowing text area + floatingLabel" floatinglabel="">
       <paper-autogrow-textarea>
         <textarea></textarea>
       </paper-autogrow-textarea>
@@ -175,18 +172,16 @@
 
     <br>
 
-    <paper-input-decorator label="input with character counter and custom error"
-                           error="maximum characters exceeded">
+    <paper-input-decorator label="input with character counter and custom error" error="maximum characters exceeded">
       <input id="i2" is="core-input" maxlength="10">
       <paper-char-counter class="counter" target="i2"></paper-char-counter>
     </paper-input-decorator>
 
     <br>
 
-    <paper-input-decorator label="input with hidden character counter"
-                           error="maximum characters exceeded">
+    <paper-input-decorator label="input with hidden character counter" error="maximum characters exceeded">
       <input id="i3" is="core-input" maxlength="10">
-      <paper-char-counter class="counter" showCounter="false" target="i3"></paper-char-counter>
+      <paper-char-counter class="counter" showcounter="false" target="i3"></paper-char-counter>
     </paper-input-decorator>
 
     <paper-input-decorator label="autogrowing text area with character counter">
@@ -202,8 +197,8 @@
 
     <div>Auto-Validation</div>
 
-    <paper-input-decorator label="required" floatingLabel error="input is required!" autoValidate>
-      <input is="core-input" required>
+    <paper-input-decorator label="required" floatinglabel="" error="input is required!" autovalidate="">
+      <input is="core-input" required="">
     </paper-input-decorator>
 
   </section>
@@ -224,13 +219,8 @@
 
   </section>
 
-  <script>
+  <script src="demo.html.0.js"></script>
 
-    document.body.addEventListener('change', function(e) {
-      console.log('change', e.target);
-    });
 
-  </script>
 
-</body>
-</html>
+</body></html>

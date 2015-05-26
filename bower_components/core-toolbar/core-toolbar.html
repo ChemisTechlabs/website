@@ -5,9 +5,7 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-
-<!--
+--><!--
 `core-toolbar` is a horizontal bar containing items that can be used for
 label, navigation, search and actions.  The items place inside the 
 `core-toolbar` are projected into a `horizontal center layout` container inside of 
@@ -62,94 +60,26 @@ on itself or any of its ancestors.
 @group Polymer Core Elements
 @element core-toolbar
 @homepage github.io
--->
+--><html><head><link rel="import" href="../polymer/polymer.html">
 
-<link rel="import" href="../polymer/polymer.html">
-
-<polymer-element name="core-toolbar" attributes="justify middleJustify bottomJustify">
+</head><body><polymer-element name="core-toolbar" attributes="justify middleJustify bottomJustify">
 <template>
 
   <link rel="stylesheet" href="core-toolbar.css">
 
-  <div id="bottomBar" class="toolbar-tools" center horizontal layout>
+  <div id="bottomBar" class="toolbar-tools" center="" horizontal="" layout="">
     <content select=".bottom"></content>
   </div>
 
-  <div id="middleBar" class="toolbar-tools" center horizontal layout>
+  <div id="middleBar" class="toolbar-tools" center="" horizontal="" layout="">
     <content select=".middle"></content>
   </div>
 
-  <div id="topBar" class="toolbar-tools" center horizontal layout>
+  <div id="topBar" class="toolbar-tools" center="" horizontal="" layout="">
     <content></content>
   </div>
 
 </template>
-<script>
-
-(function() {
-
-  Polymer('core-toolbar', {
-    
-    /**
-     * Controls how the items are aligned horizontally.
-     * Options are `start`, `center`, `end`, `between` and `around`.
-     *
-     * @attribute justify
-     * @type string
-     * @default ''
-     */
-    justify: '',
-    
-    /**
-     * Controls how the items are aligned horizontally when they are placed
-     * in the middle.
-     * Options are `start`, `center`, `end`, `between` and `around`.
-     *
-     * @attribute middleJustify
-     * @type string
-     * @default ''
-     */
-    middleJustify: '',
-    
-    /**
-     * Controls how the items are aligned horizontally when they are placed
-     * at the bottom.
-     * Options are `start`, `center`, `end`, `between` and `around`.
-     *
-     * @attribute bottomJustify
-     * @type string
-     * @default ''
-     */
-    bottomJustify: '',
-    
-    justifyChanged: function(old) {
-      this.updateBarJustify(this.$.topBar, this.justify, old);
-    },
-    
-    middleJustifyChanged: function(old) {
-      this.updateBarJustify(this.$.middleBar, this.middleJustify, old);
-    },
-    
-    bottomJustifyChanged: function(old) {
-      this.updateBarJustify(this.$.bottomBar, this.bottomJustify, old);
-    },
-    
-    updateBarJustify: function(bar, justify, old) {
-      if (old) {
-        bar.removeAttribute(this.toLayoutAttrName(old));
-      }
-      if (justify) {
-        bar.setAttribute(this.toLayoutAttrName(justify), '');
-      }
-    },
-    
-    toLayoutAttrName: function(value) {
-      return value === 'between' ? 'justified' : value + '-justified';
-    }
-    
-  });
-
-})();
-
-</script>
+<script src="core-toolbar.html.0.js"></script>
 </polymer-element>
+</body></html>

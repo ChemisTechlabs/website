@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<meta charset="UTF-8">
+<!DOCTYPE html><html><head><meta charset="UTF-8">
 <style>
 .target {
   width: 50px;
@@ -19,7 +18,7 @@
   background-color: green;
 }
 </style>
-<body>
+</head><body>
 <template id="target-template">
   <table>
     <tbody>
@@ -33,42 +32,6 @@
 <script src="../testharness/testharness.js"></script>
 <script src="../testharness/testharnessreport.js"></script>
 <script src="resources/interpolation-test.js"></script>
-<script>
-assertInterpolation({
-  property: 'border-spacing',
-  from: '0px',
-  to: '10px'
-}, [
-  {at: -0.3, is: '0px 0px'}, // Can't be negative.
-  {at: 0, is: '0px 0px'},
-  {at: 0.3, is: '3px 3px'},
-  {at: 0.6, is: '6px 6px'},
-  {at: 1, is: '10px 10px'},
-  {at: 1.5, is: '15px 15px'}
-]);
-assertInterpolation({
-  property: '-webkit-border-horizontal-spacing',
-  from: '0px',
-  to: '10px'
-}, [
-  {at: -0.3, is: '0px'}, // Can't be negative.
-  {at: 0, is: '0px'},
-  {at: 0.3, is: '3px'},
-  {at: 0.6, is: '6px'},
-  {at: 1, is: '10px'},
-  {at: 1.5, is: '15px'}
-]);
-assertInterpolation({
-  property: '-webkit-border-vertical-spacing',
-  from: '0px',
-  to: '10px'
-}, [
-  {at: -0.3, is: '0px'}, // Can't be negative.
-  {at: 0, is: '0px'},
-  {at: 0.3, is: '3px'},
-  {at: 0.6, is: '6px'},
-  {at: 1, is: '10px'},
-  {at: 1.5, is: '15px'}
-]);
-</script>
-</body>
+<script src="border-spacing-interpolation.html.0.js"></script>
+
+</body></html>

@@ -1,14 +1,11 @@
-<!doctype html>
-<!--
+<!DOCTYPE html><!--
 Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
 This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
 The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-<html>
-<head>
+--><html><head>
   <meta charset="UTF-8">
   <title>paper-icon-button basic tests</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -27,24 +24,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <paper-icon-button id="button1" icon="add"></paper-icon-button>
   </div>
 
-  <script>
+  <script src="basic.html.0.js"></script>
 
-    var b1 = document.getElementById('button1');
 
-    function centerOf(element) {
-      var rect = element.getBoundingClientRect();
-      return {left: rect.left + rect.width / 2, top: rect.top + rect.height / 2};
-    }
 
-    function approxEqual(p1, p2) {
-      return Math.round(p1.left) == Math.round(p2.left) && Math.round(p1.top) == Math.round(p2.top);
-    }
-
-    test('renders correctly independent of font size', function() {
-      assert.ok(approxEqual(centerOf(b1.$.icon), centerOf(b1)));
-    });
-
-  </script>
-
-</body>
-</html>
+</body></html>

@@ -1,14 +1,11 @@
-<!doctype html>
-<!--
+<!DOCTYPE html><!--
 Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
 This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
 The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-<html>
-<head>
+--><html><head>
   <title>core-toolbar</title>
 
   <script src="../webcomponentsjs/webcomponents.js"></script>
@@ -17,7 +14,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="../core-icon-button/core-icon-button.html">
   <link rel="import" href="../core-media-query/core-media-query.html">
 
-  <style shim-shadowdom>
+  <style shim-shadowdom="">
 
     body {
       font-family: sans-serif;
@@ -36,11 +33,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </style>
 
 </head>
-<body unresolved>
+<body unresolved="">
 
   <core-toolbar>
     <core-icon-button icon="menu"></core-icon-button>
-    <span flex>Toolbar</span>
+    <span flex="">Toolbar</span>
     <core-icon-button icon="refresh"></core-icon-button>
     <core-icon-button icon="add"></core-icon-button>
   </core-toolbar>
@@ -49,7 +46,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <core-toolbar class="dark-theme">
     <core-icon-button icon="menu"></core-icon-button>
-    <span flex>Toolbar: dark-theme</span>
+    <span flex="">Toolbar: dark-theme</span>
     <core-icon-button icon="refresh"></core-icon-button>
     <core-icon-button icon="add"></core-icon-button>
   </core-toolbar>
@@ -58,7 +55,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <core-toolbar class="tall">
     <core-icon-button icon="menu"></core-icon-button>
-    <span flex>Toolbar: tall</span>
+    <span flex="">Toolbar: tall</span>
     <core-icon-button icon="refresh"></core-icon-button>
     <core-icon-button icon="add"></core-icon-button>
   </core-toolbar>
@@ -67,7 +64,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <core-toolbar class="tall">
     <core-icon-button icon="menu" class="bottom"></core-icon-button>
-    <span flex class="bottom">Toolbar: tall with elements pin to the bottom</span>
+    <span flex="" class="bottom">Toolbar: tall with elements pin to the bottom</span>
     <core-icon-button icon="refresh" class="bottom"></core-icon-button>
     <core-icon-button icon="add" class="bottom"></core-icon-button>
   </core-toolbar>
@@ -76,7 +73,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   <core-toolbar class="medium-tall">
     <core-icon-button icon="menu"></core-icon-button>
-    <span flex></span>
+    <span flex=""></span>
     <core-icon-button icon="refresh"></core-icon-button>
     <core-icon-button icon="add"></core-icon-button>
     <span class="bottom indent">Toolbar: medium-tall with label aligns to the bottom</span>
@@ -86,7 +83,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   <core-toolbar class="tall">
     <core-icon-button icon="menu"></core-icon-button>
-    <div flex></div>
+    <div flex=""></div>
     <core-icon-button icon="refresh"></core-icon-button>
     <core-icon-button icon="add"></core-icon-button>
     <div class="middle indent">label aligns to the middle</div>
@@ -97,7 +94,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   <core-toolbar class="tall">
     <core-icon-button icon="menu"></core-icon-button>
-    <div flex></div>
+    <div flex=""></div>
     <core-icon-button icon="refresh"></core-icon-button>
     <core-icon-button icon="add"></core-icon-button>
     <div class="middle indent">element (e.g. progress) fits at the bottom of the toolbar</div>
@@ -106,14 +103,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   <core-media-query id="mediaQuery" query="max-width: 640px"></core-media-query>
   
-  <script>
+  <script src="demo.html.0.js"></script>
   
-    document.querySelector('#mediaQuery').addEventListener('core-media-change',
-      function(e) {
-        document.body.classList.toggle('core-narrow', e.detail.matches);
-      });
-  
-  </script>
-  
-</body>
-</html>
+
+
+</body></html>

@@ -1,14 +1,11 @@
-<!doctype html>
-<!--
+<!DOCTYPE html><!--
 Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
 This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
 The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-<html>
-<head>
+--><html><head>
 
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
 
@@ -38,11 +35,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </style>
 
 </head>
-<body unresolved>
+<body unresolved="">
 
   <core-toolbar style="background: #4285f4;">
     <paper-icon-button icon="menu"></paper-icon-button>
-    <span flex>Title</span>
+    <span flex="">Title</span>
     <paper-icon-button icon="refresh"></paper-icon-button>
     <paper-icon-button icon="more-vert"></paper-icon-button>
   </core-toolbar>
@@ -51,7 +48,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <core-toolbar style="background: #3f51b5;">
     <paper-icon-button icon="menu"></paper-icon-button>
-    <span flex>Title</span>
+    <span flex="">Title</span>
     <paper-icon-button icon="refresh"></paper-icon-button>
     <paper-icon-button icon="more-vert"></paper-icon-button>
   </core-toolbar>
@@ -60,7 +57,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <core-toolbar class="tall" style="background: #0f9d58;">
     <paper-icon-button icon="menu"></paper-icon-button>
-    <span flex>Title</span>
+    <span flex="">Title</span>
     <paper-icon-button icon="refresh"></paper-icon-button>
     <paper-icon-button icon="more-vert"></paper-icon-button>
   </core-toolbar>
@@ -69,7 +66,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <core-toolbar class="tall" style="background: #ffeb3b; color: #333; fill: #333;">
     <paper-icon-button icon="menu" class="bottom"></paper-icon-button>
-    <span flex class="bottom">Title</span>
+    <span flex="" class="bottom">Title</span>
     <paper-icon-button icon="refresh" class="bottom"></paper-icon-button>
     <paper-icon-button icon="more-vert" class="bottom"></paper-icon-button>
   </core-toolbar>
@@ -78,7 +75,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   <core-toolbar class="medium-tall" style="background: #ff5722;">
     <paper-icon-button icon="menu"></paper-icon-button>
-    <span flex></span>
+    <span flex=""></span>
     <paper-icon-button icon="refresh"></paper-icon-button>
     <paper-icon-button icon="more-vert"></paper-icon-button>
     <span class="bottom indent">Title</span>
@@ -88,23 +85,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   <core-toolbar class="tall" style="background: #9c27b0;">
     <paper-icon-button icon="menu"></paper-icon-button>
-    <div flex></div>
+    <div flex=""></div>
     <paper-icon-button icon="refresh"></paper-icon-button>
     <paper-icon-button icon="more-vert"></paper-icon-button>
-    <div flex class="middle indent">Title</div>
-    <div flex class="bottom indent" style="font-size: 18px;">Title2</div>
+    <div flex="" class="middle indent">Title</div>
+    <div flex="" class="bottom indent" style="font-size: 18px;">Title2</div>
   </core-toolbar>
   
   <core-media-query id="mediaQuery" query="max-width: 800px"></core-media-query>
   
-  <script>
+  <script src="core-toolbar.html.0.js"></script>
   
-    document.querySelector('#mediaQuery').addEventListener('core-media-change',
-      function(e) {
-        document.body.classList.toggle('core-narrow', e.detail.matches);
-      });
-  
-  </script>
-  
-</body>
-</html>
+
+
+</body></html>

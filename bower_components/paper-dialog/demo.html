@@ -6,10 +6,7 @@
     The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
     Code distributed by Google as part of the polymer project is also
     subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-<!doctype html>
-<html>
-<head>
+--><!DOCTYPE html><html><head>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -25,7 +22,7 @@
   <link href="paper-dialog.html" rel="import">
   <link href="paper-action-dialog.html" rel="import">
 
-  <style shim-shadowdom>
+  <style shim-shadowdom="">
     body {
       font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
       font-size: 14px;
@@ -104,7 +101,7 @@
   </style>
   -->
 </head>
-<body unresolved>
+<body unresolved="">
 
 <template is="auto-binding">
 
@@ -135,19 +132,19 @@
     <paper-action-dialog heading="Title">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-      <paper-button dismissive>More Info...</paper-button>
-      <paper-button affirmative>Decline</paper-button>
-      <paper-button affirmative autofocus>Accept</paper-button>
+      <paper-button dismissive="">More Info...</paper-button>
+      <paper-button affirmative="">Decline</paper-button>
+      <paper-button affirmative="" autofocus="">Accept</paper-button>
     </paper-action-dialog>
 
     <button>
       Modal dialog with backdrop and actions
     </button>
 
-    <paper-action-dialog backdrop autoCloseDisabled layered="false">
+    <paper-action-dialog backdrop="" autoclosedisabled="" layered="false">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-      <paper-button affirmative autofocus>Tap me to close</paper-button>
+      <paper-button affirmative="" autofocus="">Tap me to close</paper-button>
     </paper-action-dialog>
 
   </section>
@@ -190,9 +187,9 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-      <paper-button dismissive>More Info...</paper-button>
-      <paper-button affirmative>Decline</paper-button>
-      <paper-button affirmative autofocus>Accept</paper-button>
+      <paper-button dismissive="">More Info...</paper-button>
+      <paper-button affirmative="">Decline</paper-button>
+      <paper-button affirmative="" autofocus="">Accept</paper-button>
 
     </paper-action-dialog>
 
@@ -240,39 +237,8 @@
 
 </template>
 
-<script>
+<script src="demo.html.0.js"></script>
 
 
-  var scope = document.querySelector('template[is=auto-binding]');
 
-  scope.toggleDialog1 = function(e) {
-    if (e.target.localName != 'button') {
-      return;
-    }
-    var d = e.target.nextElementSibling;
-    if (!d) {
-      return;
-    }
-    d.toggle();
-  };
-
-  scope.transitions = [
-    'core-transition-center',
-    'core-transition-top',
-    'core-transition-bottom',
-    'core-transition-left',
-    'core-transition-right'
-  ];
-
-  scope.toggleDialog2 = function(e) {
-    if (e.target.localName != 'button') {
-      return;
-    }
-    scope.transition = e.target.getAttribute('transition');
-    document.getElementById('dialog2').toggle();
-  };
-
-</script>
-
-</body>
-</html>
+</body></html>

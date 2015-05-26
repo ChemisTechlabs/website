@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<!--
+<!DOCTYPE html><!--
     @license
     Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
     This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
@@ -7,14 +6,12 @@
     The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
     Code distributed by Google as part of the polymer project is also
     subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-<html lang="en">
-<head>
+--><html lang="en"><head>
   <meta charset="UTF-8">
   <title></title>
   <script src="../webcomponentsjs/webcomponents.js"></script>
   <link rel="import" href="paper-spinner.html">
-  <style shim-shadowdom>
+  <style shim-shadowdom="">
   paper-spinner.blue::shadow .circle {
     border-color: #4285f4;
   }
@@ -33,19 +30,13 @@
   </style>
 </head>
 <body>
-  <paper-spinner class="blue" active></paper-spinner>
-  <paper-spinner class="red" active></paper-spinner>
-  <paper-spinner class="yellow" active></paper-spinner>
-  <paper-spinner class="green" active></paper-spinner>
-  <paper-spinner active></paper-spinner>
+  <paper-spinner class="blue" active=""></paper-spinner>
+  <paper-spinner class="red" active=""></paper-spinner>
+  <paper-spinner class="yellow" active=""></paper-spinner>
+  <paper-spinner class="green" active=""></paper-spinner>
+  <paper-spinner active=""></paper-spinner>
   <button>Toggle</button>
-  <script>
-    document.querySelector('button').addEventListener('click', function() {
-      var spinners = document.querySelectorAll('paper-spinner');
-      Array.prototype.forEach.call(spinners, function(spinner) {
-        spinner.active = !spinner.active;
-      });
-    });
-  </script>
-</body>
-</html>
+  <script src="demo.html.0.js"></script>
+
+
+</body></html>

@@ -5,8 +5,7 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-<!--
+--><!--
 `paper-checkbox` is a button that can be either checked or unchecked.  User
 can tap the checkbox to check or uncheck it.  Usually you use checkboxes
 to allow user to select multiple options from a set.  If you have a single
@@ -50,12 +49,10 @@ To change the checkbox unchecked color:
 @element paper-checkbox
 @extends paper-radio-button
 @homepage github.io
--->
-
-<link rel="import" href="../polymer/polymer.html">
+--><html><head><link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../paper-radio-button/paper-radio-button.html">
 
-<polymer-element name="paper-checkbox" extends="paper-radio-button" role="checkbox">
+</head><body><polymer-element name="paper-checkbox" extends="paper-radio-button" role="checkbox">
   <template>
 
     <link rel="stylesheet" href="paper-checkbox.css">
@@ -73,30 +70,6 @@ To change the checkbox unchecked color:
     <div id="checkboxLabel" hidden?="{{!label}}">{{label}}<content></content></div>
 
   </template>
-  <script>
-
-    Polymer('paper-checkbox', {
-
-      /**
-       * Fired when the checked state changes due to user interaction.
-       *
-       * @event change
-       */
-
-      /**
-       * Fired when the checked state changes.
-       *
-       * @event core-change
-       */
-
-      toggles: true,
-
-      checkedChanged: function () {
-        this.setAttribute('aria-checked', this.checked ? 'true' : 'false');
-        this.fire('core-change');
-      }
-
-    });
-
-  </script>
+  <script src="paper-checkbox.html.0.js"></script>
 </polymer-element>
+</body></html>

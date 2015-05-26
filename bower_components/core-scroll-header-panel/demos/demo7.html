@@ -1,14 +1,11 @@
-<!doctype html>
-<!--
+<!DOCTYPE html><!--
 Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
 This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
 The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-<html>
-<head>
+--><html><head>
   <title>core-scroll-header-panel: demo7</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -23,7 +20,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="../../core-icon-button/core-icon-button.html">
   <link rel="import" href="../../core-media-query/core-media-query.html">
 
-  <style shim-shadowdom>
+  <style shim-shadowdom="">
 
     html, body {
       height: 100%;
@@ -71,14 +68,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </style>
 
 </head>
-<body unresolved>
+<body unresolved="">
 
-  <core-scroll-header-panel condenses>
+  <core-scroll-header-panel condenses="">
 
     <core-toolbar class="tall">
 
       <core-icon-button icon="arrow-back"></core-icon-button>
-      <div flex></div>
+      <div flex=""></div>
       <core-icon-button icon="search"></core-icon-button>
       <core-icon-button icon="more-vert"></core-icon-button>
       <div class="bottom indent title">Title</div>
@@ -96,26 +93,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <core-media-query id="mquery" query="min-width: 600px"></core-media-query>
 
-  <script>
+  <script src="demo7.html.0.js"></script>
 
-    // toggle fixed header based on screen size
-    var panel = document.querySelector('core-scroll-header-panel');
-    var mquery = document.querySelector('#mquery');
-    mquery.addEventListener('core-media-change', function() {
-      panel.fixed = mquery.queryMatches;
-    });
 
-    // custom transformation: scale header's title
-    var titleStyle = document.querySelector('.title').style;
-    addEventListener('core-header-transform', function(e) {
-      var d = e.detail;
-      var m = d.height - d.condensedHeight;
-      var scale = Math.max(0.75, (m - d.y) / (m / 0.25)  + 0.75);
-      titleStyle.transform = titleStyle.webkitTransform =
-          'scale(' + scale + ') translateZ(0)';
-    });
 
-  </script>
-
-</body>
-</html>
+</body></html>

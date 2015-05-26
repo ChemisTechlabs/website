@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<meta charset="UTF-8">
+<!DOCTYPE html><html><head><meta charset="UTF-8">
 <style>
 .target {
   width: 100px;
@@ -11,22 +10,10 @@
   background-color: green;
 }
 </style>
-<body>
+</head><body>
 <script src="../testharness/testharness.js"></script>
 <script src="../testharness/testharnessreport.js"></script>
 <script src="resources/interpolation-test.js"></script>
-<script>
-assertInterpolation({
-  property: 'opacity',
-  from: '0',
-  to: '1'
-}, [
-  {at: -0.3, is: '0'}, // CSS opacity is [0-1].
-  {at: 0, is: '0'},
-  {at: 0.3, is: '0.3'},
-  {at: 0.6, is: '0.6'},
-  {at: 1, is: '1'},
-  {at: 1.5, is: '1'}
-]);
-</script>
-</body>
+<script src="opacity-interpolation.html.0.js"></script>
+
+</body></html>

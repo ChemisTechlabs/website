@@ -5,9 +5,7 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-
-<!--
+--><!--
 `paper-radio-group` allows user to select only one radio button from a set.
 Checking one radio button that belongs to a radio group unchecks any 
 previously checked radio button within the same group. Use
@@ -28,13 +26,11 @@ information about `paper-radio-button`.
 @element paper-radio-group
 @extends core-selector
 @homepage github.io
--->
-
-<link rel="import" href="../core-a11y-keys/core-a11y-keys.html">
+--><html><head><link rel="import" href="../core-a11y-keys/core-a11y-keys.html">
 <link rel="import" href="../core-selector/core-selector.html">
 <link rel="import" href="../paper-radio-button/paper-radio-button.html">
 
-<polymer-element name="paper-radio-group" extends="core-selector" role="radiogroup">
+</head><body><polymer-element name="paper-radio-group" extends="core-selector" role="radiogroup">
 
   <template>
 
@@ -58,62 +54,7 @@ information about `paper-radio-button`.
     
   </template>
   
-  <script>
-  
-    Polymer('paper-radio-group', {
-      nextIndex: function(index) {
-        var items = this.items;
-        var newIndex = index;
-        do {
-          newIndex = (newIndex + 1) % items.length;
-          if (newIndex === index) {
-            break;
-          }
-        } while (items[newIndex].disabled);
-        return newIndex;
-      },
-      previousIndex: function(index) {
-        var items = this.items;
-        var newIndex = index;
-        do {
-          newIndex = (newIndex || items.length) - 1;
-          if (newIndex === index) {
-            break;
-          }
-        } while (items[newIndex].disabled);
-        return newIndex;
-      },
-      selectNext: function() {
-        var node = this.selectIndex(this.nextIndex(this.selectedIndex));
-        node.focus();
-      },
-      selectPrevious: function() {
-        var node = this.selectIndex(this.previousIndex(this.selectedIndex));
-        node.focus();
-      },
-      
-      /**
-       * Specifies the attribute to set on the selected element to indicate
-       * its active state.
-       *
-       * @attribute selectedAttribute
-       * @type string
-       * @default 'checked'
-       */
-      selectedAttribute: 'checked',
-      
-      /**
-       * The event that would be fired from the item element to indicate
-       * it is being selected.
-       *
-       * @attribute activateEvent
-       * @type string
-       * @default 'change'
-       */
-      activateEvent: 'change'
-
-    });
-  
-  </script>
+  <script src="paper-radio-group.html.0.js"></script>
   
 </polymer-element>
+</body></html>

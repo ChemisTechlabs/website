@@ -1,14 +1,11 @@
-<!doctype html>
-<!--
+<!DOCTYPE html><!--
 Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
 This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
 The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-<html>
-<head>
+--><html><head>
   <meta charset="UTF-8">
   <title>core-selector-next-previous-wrap</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -25,7 +22,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </style>
 
 </head>
-<body unresolved>
+<body unresolved="">
 
   <core-selector id="selector" selected="0">
     <div>Item 1</div>
@@ -33,81 +30,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <div>Item 3</div>
   </core-selector>
 
-  <script>
+  <script src="next-previous.html.0.js"></script>
 
-    var s = document.querySelector('#selector');
 
-    function assertAndSelect(method, expectedIndex, wrap) {
-      return function(done) {
-        assert.equal(s.selected, expectedIndex);
-        s[method](wrap);
-        flush(done);
-      }
-    }
 
-    suite('next/previous', function() {
-
-      test('selectNext(true) wraps', function(done) {
-        assert.equal(s.selected, 0);
-
-        async.series([
-          assertAndSelect('selectNext', 0, true),
-          assertAndSelect('selectNext', 1, true),
-          assertAndSelect('selectNext', 2, true),
-          function(done) {
-            assert.equal(s.selected, 0);
-            done();
-          }
-        ], done);
-      });
-
-      test('selectPrevious(true) wraps', function(done) {
-        assert.equal(s.selected, 0);
-
-        async.series([
-          assertAndSelect('selectPrevious', 0, true),
-          assertAndSelect('selectPrevious', 2, true),
-          assertAndSelect('selectPrevious', 1, true),
-          function(done) {
-            assert.equal(s.selected, 0);
-            done();
-          }
-        ], done);
-      });
-
-      test('selectNext() does not wrap', function(done) {
-        assert.equal(s.selected, 0);
-
-        async.series([
-          assertAndSelect('selectNext', 0),
-          assertAndSelect('selectNext', 1),
-          assertAndSelect('selectNext', 2),
-          assertAndSelect('selectNext', 2),
-          assertAndSelect('selectNext', 2),
-          function(done) {
-            s.selected = 0;
-            asyncPlatformFlush(done);
-          }
-        ], done);
-      });
-
-      test('selectPrevious() does not wrap', function(done) {
-        assert.equal(s.selected, 0);
-        s.selected = 2;
-
-        async.series([
-          asyncPlatformFlush,
-          assertAndSelect('selectPrevious', 2),
-          assertAndSelect('selectPrevious', 1),
-          assertAndSelect('selectPrevious', 0),
-          assertAndSelect('selectPrevious', 0),
-          assertAndSelect('selectPrevious', 0),
-        ], done);
-      });
-
-    });
-
-  </script>
-
-</body>
-</html>
+</body></html>
