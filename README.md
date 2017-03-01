@@ -7,4 +7,4 @@ Thanks for all the followers!<br>
 
 Website for Chemis project<br>
 Author: Guilherme Caldas<br>
-Email: gui.caldas.o@gmail.com
+Email: chemisproject@googlegroups.com
