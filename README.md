@@ -2,7 +2,7 @@
 Chemis Site (deprecated)
 =============
 
-This project is deprecated! The new website is being developed under Google Sites platform. I will keepm the code as archive. 
+This project is deprecated! The new website is being developed under Google Sites platform. I will keep the code here as archive. 
 Thanks for all the followers!<br>
 
 Website for Chemis project<br>
