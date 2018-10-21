@@ -1,10 +1,3 @@
-<img width="100" src="https://s3.amazonaws.com/chemis/chemis-logo-no-bg.png"><br>
-Chemis Site (deprecated)
-=============
+# Deprecated
 
-This project is discontinued! The new website is being developed under Google Sites platform. I will keep the code here as archive. 
-Thanks for all the followers!<br>
-
-Website for Chemis project<br>
-Author: Guilherme Caldas<br>
-Email: chemisproject@googlegroups.com
+This project is discontinued! New versions of Chemis website won't published here, unless the source code become relevant for community someday. I will keep the old code here as archive.
